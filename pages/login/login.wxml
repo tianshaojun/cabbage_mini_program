@@ -1,0 +1,18 @@
+<view class="logo">
+  <image src="{{shopinfolo.sets.shop.img}}" class="logoBg"> </image>
+  <!-- <image src="{{shopinfolo.sets.shop.logo}}" class="logoImage" mode="aspectFit"> </image>  -->
+</view>
+<!-- <view class="loginbg">
+    <view>{{shopinfolo.sets.shop.name}}</view> 
+</view> -->
+<view class="version">{{version}}</view>
+<view class="g-login" wx:if="{{authorization==0}}">
+  <view>
+    <view>
+      <image src="/images/xl.png"></image>
+      <view class="cg-butop">我们需要您的授权</view>
+      <view class="cg-col">登录才能为您提供更多的服务</view>
+      <button class="getUserInfo" open-type='getUserInfo'  bindgetuserinfo="onGotUserInfo">登录</button>
+    </view>
+  </view>
+</view>

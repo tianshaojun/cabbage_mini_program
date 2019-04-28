@@ -1,0 +1,59 @@
+<!-- 搜索 start -->
+<view class="search">
+  <navigator url="../../search/search">
+    <view class="searchText">
+      <image src="../../../images/search.png" class="searchTextImg" />
+      <text>搜索商品</text>
+    </view>
+  </navigator>
+</view>
+<!-- 搜索 end -->
+<!-- 轮播图 start -->
+<import src="../../../template/banner/index.wxml" />
+<template is="shops" data="{{list}}"></template>
+<!-- 轮播图 end -->
+<!-- 分类 start -->
+<view class="classView">
+  <block wx:for="{{list.category_sub}}" wx:key="classViewList">
+    <navigator class="classViewList" url="../../category-two/category-two?index={{index}}&title={{item.name}}&categoryId={{item.id}}&popular=1">
+      <image src="{{item.thumb}}" mode="aspectFill"></image>
+      <view class="overflow">{{item.name}}</view>
+    </navigator>
+  </block>
+</view>
+<!-- 分类 end -->
+<view class="make">
+  <view class="makeTal">
+    <navigator url="../../appointment/appointment">
+      <text class="maketext">预约您的定制服务</text>
+      <view class="makebut">点击预约</view>
+    </navigator>
+  </view>
+</view>
+<view class="recommend"><text>精选宝贝</text></view>
+<view class="fruitsMendTow" style="width:100%;overflow:hidden;">
+  <view class="latestOnlineBox">
+    <navigator class="fruitsMendTowBox" wx:for="{{ishotShop}}" wx:key="classViewList" url="../../goods-detail/goods-detail?id={{item.id}}&goodsid={{item.id}}">
+      <image src="{{item.thumb}}" mode="aspectFill" class="fruitsMendImgT"></image>
+      <view class="ishotShop-title">{{item.title}}</view>
+      <view class="ishotShop-price">￥{{item.marketprice}}</view>
+    </navigator>
+  </view>
+</view>
+<!-- 推荐商品 start -->
+<view class="recommend"><text>推荐宝贝</text></view>
+<import src="../../../template/goods-list/index.wxml" />
+<template is="boutique1" data="{{list,redic}}"></template>
+<!-- 推荐商品 end -->
+<view class="noMore clear" hidden="{{hide}}">
+  没有更多内容了
+</view>
+<!-- <view class="loging"  hidden="{{loading}}">
+  <view class="spinner">
+    <view class="rect1"></view>
+    <view class="rect2"></view>
+    <view class="rect3"></view>
+    <view class="rect4"></view>
+    <view class="rect5"></view>
+  </view>
+</view> -->

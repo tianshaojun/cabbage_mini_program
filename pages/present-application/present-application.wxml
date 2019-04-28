@@ -1,0 +1,13 @@
+<view class='application'>
+  <view class='application_mesg'>
+    <image class='application_img' src='../../images/appoint.png'></image>
+    <view class="application_name">微信昵称：这里了是昵称</view>
+    <view class='application_wx'>微信号：1264642</view>
+    <image class='application_code' src='../../images/appoint.png'></image>
+    <view class='application_code_tips'>长按识别添加好友</view>
+  </view>
+  <view class='application_rule'>
+    <view class='application_rule_title'>提现规则</view>
+    <view class='application_rule_mesg'>1、提现规则条目列表，文字表达不限字数最多两行; 考试考核得分菲利克斯kjsrht ksjflksksjflksksjflksksjflksksjflksksjflksksjflksksjflks kjljs; </view>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+<!--轮播 -->
+<template name="shops">
+<swiper class="swiper" indicator-dots="true" autoplay="auto" indicator-active-color="#ff3355" circular="true" interval="5000" duration="1000">
+  <block wx:for="{{list.banner}}" wx:for-index="index" wx:key="getBanner">
+    <block wx:if="{{list.link==''}}">
+      <swiper-item>
+        <image src="{{item.thumb}}" class="slide-image" mode="aspectFill" />
+      </swiper-item>
+    </block>
+    <block wx:else>
+      <navigator url="../../goods-detail/goods-detail?id={{item.link}}&goodsid={{item.link}}">
+        <swiper-item>
+          <image src="{{item.thumb}}" class="slide-image" mode="aspectFill" />
+        </swiper-item>
+      </navigator>
+    </block>
+  </block>
+</swiper>
+</template>

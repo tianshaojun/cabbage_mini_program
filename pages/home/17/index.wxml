@@ -1,0 +1,44 @@
+<!-- 搜索 start -->
+<view class="search">
+  <navigator url="../../search/search">
+    <view class="searchText">
+      <image src="../../../images/search.png" class="searchTextImg" />
+      <text>搜索商品</text>
+    </view>
+  </navigator>
+</view>
+<!-- 搜索 end -->
+
+<!-- 轮播图 start -->
+<import src="../../../template/banner/index.wxml" />
+<template is="shops" data="{{list}}"></template>
+<!-- 轮播图 end -->
+<!-- 预约 -->
+<view class="make">
+  <view class="makeTal">
+    <navigator url="../../appointment/appointment">
+      <text class="makebut">预约</text>
+      <text class="maketext">预约您的定制服务</text>
+      <view class="makeGo">GO</view>
+    </navigator>
+  </view>
+</view>
+<!-- 分类 start -->
+<view class="recommend" wx:if="{{list.category_sub.length>0}}"><text></text>推荐分类</view>
+<view class="classView">
+  <block wx:for="{{list.category_sub}}" wx:key="classViewList">
+    <navigator class="classViewList" url="../../category-two/category-two?index={{index}}&title={{item.name}}&categoryId={{item.id}}&popular=1">
+      <image src="{{item.thumb}}" mode="aspectFill"></image>
+      <view class="overflow">{{item.name}}</view>
+    </navigator>
+  </block>
+</view>
+<!-- 分类 end -->
+<!-- 推荐商品 start -->
+<view class="recommend"><text></text>热销商品</view>
+<import src="../../../template/goods-list/index.wxml" />
+<template is="boutique1" data="{{list,redic}}"></template>
+<!-- 推荐商品 end -->
+<view class="noMore clear" hidden="{{hide}}">
+  没有更多内容了
+</view>

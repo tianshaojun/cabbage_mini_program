@@ -1,0 +1,55 @@
+<view class="container">
+  <view class="status-box">
+    <view bindtap="bindViewTab" data-method="changetab" class="status-label {{index == tabIndex ? 'active' : ''}}" wx:for-items="{{status}}" wx:key="{{index}}" data-index="{{index}}">
+      {{item.name}}
+      <view class="" wx:if="{{index!=0}}"></view>
+    </view>
+  </view>
+  <view class="no-order" hidden="{{list_order.length > 0 ? true : false}}">
+    <image src="../../images/more.png" class="no-order-img"></image>
+    <view class="text">暂无订单</view>
+  </view>
+  <view class="order-list" hidden="{{list_order.length > 0 ? false : true}}">
+    <view class="a-order" wx:for-items="{{list_order}}" wx:key="{{index}}">
+      <view class="order-date">
+        <view class="date-box">下单时间：{{item.createtime}}</view>
+        <view class="status {{(item.status==-1 || item.status==4) ? '':'red'}}">
+          {{item.status==-1?'已取消':status[item.status+1].name}}
+        </view>
+      </view>
+      <view class="goods-info" bindtap="orderDetail" data-id="{{item.id}}">
+        <view class="goods-des">
+          <view>订单号:{{item.ordersn}} </view>
+          <view wx:if="{{item.remark && item.remark != ''}}">备注： {{item.remark}}</view>
+        </view>
+      </view>
+      <view hidden="{{item.items.length==0}}">
+        <view class="img-box" wx:for="{{item.items}}" wx:key="{{index}}">
+          <view class="orderImage"><image src="{{item.thumb}}" mode="aspectFill" class="goods-img img"></image></view>
+          <view class="orderstat">
+             <view>{{item.title}}</view>
+             <view>{{item.optionname==null||item.optionname==''?"":item.optionname}}</view>
+             <view><text class="total-price">￥{{item.price}} </text>   X{{item.total}}</view>
+          </view>
+          
+        </view>
+        <!-- <scroll-view class="goods-img-container" scroll-x="true">
+          <view class="img-box" wx:for="{{item.items}}" wx:key="{{index}}">
+            <view>
+              <image src="{{item.thumb}}" class="goods-img"></image>
+            </view>
+          </view>
+        </scroll-view> -->
+      </view>
+      <view class="price-box">
+        <view class="total-price">合计：¥ {{item.price}}</view>
+        <view class="btn cancel-btn" hidden="{{item.status==0? fslse : true}}" bindtap="bindViewTab" data-method="tocancel" data-index="{{index}}" data-id="{{item.id}}">取消订单</view>
+        <view class="btn topay-btn" hidden="{{item.status==0? fslse : true}}" bindtap="bindViewTab" data-method="topay" data-id="{{item.id}}" data-money="{{item.price}}">马上付款</view>
+        <view class="status" wx:if="{{item.status==2}}">
+          <view class="btn topay-btn" bindtap="bindViewTab" data-method="receipt" data-id="{{item.id}}" data-index="{{index}}"  data-money="{{item.price}}">确认收货</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>

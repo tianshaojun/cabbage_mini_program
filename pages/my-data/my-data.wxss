@@ -1,0 +1,126 @@
+/* pages/mydata/mydata.wxss */
+page,view,text,image{
+  box-sizing: border-box;
+}
+page{
+  background: #f5f5f5;
+}
+/* 我的资料展示 end */
+.myHead{
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  align-items: center;
+  padding: 34rpx 24rpx;
+  border-bottom: 1rpx solid #e4e4e4;
+  color: #333;
+  font-size: 36rpx;
+}
+.myData_rig{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  vertical-align: middle;
+}
+.headImg{
+  width: 98rpx;
+  height: 98rpx;
+  border-radius: 50%;
+}
+.arrow{
+  width:16rpx;
+  height: 26rpx;
+  vertical-align: middle;
+  margin-left: 28rpx;
+}
+.myData{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 34rpx 24rpx 34rpx 0;
+  font-size: 28rpx;
+  color: #323232;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+.myData .myData_rig{
+  font-size: 26rpx;
+}
+.myDataList{
+  border-top: 1rpx solid #e5e5e5;
+  background: #fff;
+  margin-top: 22rpx;  
+  padding-left: 24rpx;
+}
+/* 我的资料展示 end */
+
+/* 我的昵称 start */
+.myName{
+  background: #fff;
+  padding:0 24rpx;
+  font-size: 26rpx;
+  border-top: 1rpx solid #e5e5e5;
+  border-bottom: 1rpx solid #e5e5e5;
+  margin-top: 20rpx;
+}
+.myName input{
+  width: 660rpx;
+}
+.delBtn{
+  overflow: hidden;
+  text-align: center;
+  line-height: 60rpx;
+  margin-top:20rpx;
+}
+
+.btnGroup{
+  padding: 0 30rpx;
+  margin-top: 60rpx;
+}
+.btnGroup button{
+  margin: 30rpx 0;
+}
+.myBut{
+  width: 100%;
+  height: 88rpx;
+  font-size: 40rpx;
+  line-height: 88rpx;
+  text-align: center;
+  color: #fff;
+  background:#fb5660; 
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  height: 88rpx;
+  line-height: 88rpx;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.items:last-child {
+  border-bottom: none;
+}
+
+.items_lf {
+  color: #323232;
+  font-size: 28rpx;
+  width: 140rpx;
+}
+
+.items_rig {
+  padding: 0 20rpx;
+  width: 522rpx;
+}
+
+.items_rig input {
+  height: 88rpx;
+  line-height: 88rpx;
+  display: block;
+  width: 100%;
+}

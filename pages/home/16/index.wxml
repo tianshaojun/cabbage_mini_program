@@ -1,0 +1,61 @@
+<!-- 搜索 -->
+<view class="search">
+  <navigator url="../../search/search">
+    <view class="searchimg">
+    </view>
+    <view class="searchText">
+      <image src="../../../images/search.png" class="searchTextImg" />
+      <text class="searchTextwords">搜索商品</text>
+    </view>
+  </navigator>
+</view>
+<!-- 轮播图 -->
+<view class="banner">
+  <import src="../../../template/banner/index.wxml" />
+  <template is="shops" data="{{list}}"></template>
+</view>
+<!-- 预约 -->
+<view class="make">
+  <view class="makeTal">
+    <navigator url="../../appointment/appointment">
+      <image src="../../../images/tel.png" class="makeimage" />
+      <text class="maketext">预约您的定制服务</text>
+      <view class="makebut">去预约</view>
+    </navigator>
+  </view>
+</view>
+<!-- 推荐分类 -->
+<view class="make1">
+  <view class="makeTal1">
+    <view class="makeTal1s">
+      <text class="maketext1">推荐分类</text>
+    </view>
+  </view>
+  <view class="fruitsMendTow" style="width:100%;overflow:hidden;">
+    <scroll-view class="latestOnlineBox" scroll-x="true" style="white-space: nowrap; ">
+      <navigator class="fruitsMendTowBox" wx:for="{{list.category_sub}}" wx:key="classViewList" url="../../category-two/category-two?index={{index}}&title={{item.name}}&categoryId={{item.id}}&popular=1">
+        <view>{{item.name}}</view>
+        <image src="{{item.thumb}}" class="fruitsMendImgT"></image>
+      </navigator>
+    </scroll-view>
+  </view>
+</view>
+<!--空白  -->
+<view class="myOne"></view>
+<!--猜你喜欢  -->
+<view class="classname">
+  <view class="makeTal1">
+    <view class="makeTal1a">
+      <text class="maketext1">猜你喜欢</text>
+    </view>
+  </view>
+  <view style="width:100%;height:30rpx;background:#f5f5f5"></view>
+  <!--主体  -->
+  <!-- <view class="likeBox"> -->
+  <import src="../../../template/goods-list/index.wxml" />
+  <template is="boutique1" data="{{list,redic}}"></template>
+  <view class="noMore clear" hidden="{{hide}}">
+    没有更多内容了
+  </view>
+  <!-- </view> -->
+</view>

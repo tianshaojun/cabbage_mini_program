@@ -1,0 +1,353 @@
+/*精品*/
+ @import "../../../template/goods-list/index.wxss";
+ @import "../../../template/banner/index.wxss"; 
+.search {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  border-radius: 100rpx;
+  border-top:1rpx solid #FF6A5B;
+}
+.searchimg {
+  width: 652rpx;
+  height:60rpx;
+  background: #FFFFFF;
+  margin:20rpx auto;
+  border-radius:30rpx;
+
+}
+
+.searchText {
+  /* width: 600rpx; */
+  height: 60rpx;
+  position: absolute;
+  top:22rpx;
+  left:284rpx;
+}
+.searchTextImg{
+  width:24rpx;
+  height:24rpx;
+   margin:21rpx 20rpx 15rpx 24rpx;  
+  float:left;
+}
+.searchTextwords{
+   float:left;
+   line-height:60rpx;
+   color:#999999;
+   font-size:26rpx;
+}
+
+/* 轮播图 */
+
+.banner {
+  width: 100%;
+  position: relative;
+}
+
+
+/* 预约 start */
+.make {
+  width: 100%;
+  height: 120rpx;
+  background-color: rgb(243, 243, 243);
+  position: relative;
+}
+
+.makeTal {
+  width:700rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 20rpx;
+  left: 26rpx;
+  border-radius: 15rpx;
+  background:#FFFFFF;
+}
+
+.makeimage {
+  width: 28rpx;
+  height: 26rpx;
+  margin: 30rpx 16rpx 0 26rpx;
+}
+
+.maketext {
+  line-height:80rpx;
+  color:#FF6A5B;
+}
+
+.makebut {
+  position: absolute;
+  width: 88rpx;
+  height: 36rpx;
+  top: 22rpx;
+  right: 30rpx;
+  color: #FF6A5B;
+  border: 1rpx solid #FF6A5B;
+  text-align: center;
+  line-height: 32rpx;
+  border-radius: 5rpx;
+  font-size: 24rpx;
+}
+/* 预约 end */
+
+
+
+/*推荐分类  */
+.recommend{
+  display: flex;
+}
+.xianzhi{
+  width:100%;
+  height:20rpx;
+  background: #f5f5f5;
+}
+.make1 {
+  width: 100%;
+  background: #fff;
+
+}
+
+.makeTal1 {
+  width: 100%;
+  padding-top:20rpx;
+  margin-bottom:20rpx;
+  text-align: center;
+}
+.makeTal1s{
+  width: 160rpx;
+  height: 52rpx;
+}
+.makeTals{
+  width: 100%;
+  text-align: center;
+}
+.makeimage1 {
+  width: 58rpx;
+  height: 4rpx;
+  vertical-align: middle;
+  padding-bottom: 10rpx;
+}
+
+.maketext1 {
+  font-size: 32rpx;
+  color:#f60;
+  margin-left:32rpx;
+}
+.makeTal1as{
+  /* width: 200rpx; */
+  height: 48rpx;
+  line-height: 48rpx;
+  margin: 0 auto;
+}
+.makeTal1a{
+  width: 152rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  background:#1DCBC0;
+  border-top-right-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+}
+.customized{
+  display: flex;
+}
+
+.makeTalTowBox{
+  padding:0 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.makeTalTowImg{
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.makeTalTow {
+  margin-bottom: 20rpx;
+  width: 25%;
+  padding: 0 20rpx;
+}
+
+.makeTalTow view{
+  width: 150rpx;
+  font-size: 30rpx;
+  text-align: center; 
+  overflow: hidden;
+  white-space: nowrap; 
+  text-overflow: ellipsis;   
+}
+.latestOnlineBox {
+  width:100%;
+  box-sizing: border-box;
+} 
+.fruitsMendTow{
+  /* padding-left: 36rpx; */
+  display:flex;
+  justify-content: space-around;
+   border-bottom:2rpx solid #dddddd;
+}
+.fruitsMendTowBox{
+  /* margin-right: 42rpx; */
+  width:25%;
+  padding-top:18rpx;
+  display: inline-block;
+
+}
+.fruitsMendTowBox view{
+  text-align: center;
+  line-height: 34rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 10rpx;
+}
+.fruitsMendImgT{
+  width:140rpx;
+  height:140rpx;
+  margin-left:22rpx;
+  box-sizing:border-box;
+  margin-bottom: 20rpx;
+  border-radius: 50%;
+}
+
+/*zhuti  */
+
+.caseMainBox {
+  white-space: nowrap;
+  display: flex;
+  height: 203rpx;
+  padding: 10rpx 0 30rpx 0;
+}
+.brandBox{
+  white-space: nowrap;
+  display: flex;
+  height: 153rpx;
+  padding: 0 0 35rpx 0;
+}
+.caseMain {
+  display: inline-block;
+}
+.caseMainImg {
+  width: 375rpx;
+  height: 203rpx;
+  background:rebeccapurple;
+}
+.caseMainImg1 {
+  width: 375rpx;
+  height: 203rpx;
+  background:yellow;
+ 
+}
+.brandImg{
+  width: 153rpx;
+  height: 153rpx;
+  background:rebeccapurple;
+  border: 1rpx solid red;
+}
+.myOne{
+  width: 100%;
+  height: 20rpx;
+  background: #e6e6e6;
+}
+
+/*热卖  */
+.likeBox{
+  display: flex;
+  padding-left:40rpx; 
+  flex-wrap: wrap;
+}
+
+.like{
+  box-sizing: border-box;
+  margin-right: 25rpx;
+}
+.likeImg{
+  width:324rpx;
+  height: 350rpx;
+  border-radius: 10rpx;
+}
+.likeFont{
+  width: 306rpx;
+  font-size: 26rpx;
+  margin:10rpx auto 0 auto;
+  display:-webkit-box;
+  overflow:hidden;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  line-height:1.5;
+}
+.likeOne{
+  color: #fe0000;
+  font-size: 24rpx;
+  margin-right: 13rpx;
+}
+.likeTow{
+  color: #8f8f8f;
+  font-size: 24rpx;
+}
+/*预约  */
+.fixation{
+  position: fixed;
+  right:30rpx;
+  bottom:112rpx;
+}
+.fixationImg{
+  width: 96rpx;
+  height: 117rpx;
+}
+/*立即抢购  */
+.purchaseBox{
+  width: 50%;
+}
+.purchaseBoxBox{
+  display: flex;
+  flex-wrap: wrap;
+}
+.purchase{
+  padding: 0 32rpx;
+  
+  margin-bottom: 38rpx;
+}
+.purchaseImg{
+  width: 200rpx;
+  height: 200rpx;
+  margin-left: 60rpx;
+  margin-bottom: 20rpx;
+}
+.purchaseRight{
+
+}
+.purchaseOne{
+  color: #333333;
+  font-size: 28rpx;
+  line-height: 1.3;
+  display:-webkit-box;
+  overflow:hidden;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+}
+.purchaseTow{
+  color:#999999;
+  font-size: 24rpx;
+  height:10rpx;
+}
+.purchasetheLeft{
+  color:#f60 ;
+}
+.purchasetheRight{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #f60 ;
+  width: 149rpx;
+  height: 51rpx;
+  line-height: 51rpx;
+  text-align: center;
+  color: #FFFFFF;
+  border-radius: 5rpx;
+}
+.purchasethe{
+  position: relative;
+}

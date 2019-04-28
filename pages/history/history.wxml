@@ -1,0 +1,9 @@
+<!--轮播-->
+<import src="../../template/favorite/index.wxml" />
+<view>
+  <template is="collectionFootprint" data="{{list}}"></template>
+</view>
+<!-- <button class="submitBtn" bindtap="delItems">删除</button> -->
+<view class="noMore clear" hidden="{{page.next}}">
+  没有更多内容了
+</view>

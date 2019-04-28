@@ -1,0 +1,80 @@
+<view class="search">
+  <navigator url="../../search/search">
+    <view class="searchText">
+      <image src="../../../images/search.png" class="searchTextImg" />
+      <text>搜索商品</text>
+    </view>
+  </navigator>
+</view>
+<!-- 搜索 start -->
+<block wx:if="{{opid!='' && opid!=undefined}}">
+  <!-- 轮播图 start-->
+  <view class="banner">
+    <import src="../../../template/banner/index.wxml" />
+    <template is="shops" data="{{list}}"></template>
+  </view>
+  <!-- 轮播图 end-->
+
+  <!-- 预约 start -->
+  <view class="make">
+    <view class="makeTal">
+      <navigator url="../../appointment/appointment">
+        <image src="../../../images/tel.png" class="makeimage" />
+        <text class="maketext">预约您的定制服务</text>
+        <view class="makebut">去预约</view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 预约 end -->
+
+  <!-- 导航切换 start -->
+  <!-- <view class="category space_between flex flex_nowrap">
+    <view data-index="{{-1}}" class="flex_shrink {{tab==index?'selected':''}}" bindtap="tabNav">全部</view>
+    <block wx:for="{{list.category_sub}}">
+      <view data-index="{{index}}" class="flex_shrink {{tab==index?'selected':''}}" bindtap="tabNav" data-name="{{item.name}}" data-id="{{item.id}}" data-index="{{index}}">{{item.name}}</view>
+    </block>
+  </view> -->
+
+
+  <view class="type-container">
+    <scroll-view class="type-navbar" scroll-x="true">
+      <view class="type-box">
+        <view id="0" class="type-navbar-item {{categoryId == -1 ? 'type-item-on' : ''}}" bindtap="bindViewTab" data-method="selectedItem" data-id="0"  data-index="-1">
+          全部
+        </view>
+      </view>
+      <view class="type-box" wx:for="{{list.category_sub}}" wx:key="cl">
+        <view id="{{item.id}}" class="type-navbar-item {{categoryId == index ? 'type-item-on' : ''}}" bindtap="bindViewTab" data-method="selectedItem" data-id="{{item.id}}" data-index="{{index}}">
+          {{item.name}}
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view style="width:100%;height:40rpx;background:rgb(243, 243, 243);"></view>
+  <!-- 导航切换 end -->
+  <!-- 产品列表 start -->
+  <block wx:if="{{list.goods.length>0}}">
+     <import src="../../../template/goods-list/index.wxml" /> 
+     <template is="boutique1" data="{{list,redic}}"></template> 
+  </block>
+  <!-- 产品列表 end -->
+  <block wx:else>
+    <view class="morePro1">
+      <image src="../../../images/more.png" class="moreimg"></image>
+      <!-- <view class="">暂无商品，请搜索其他商品看看吧！</view> -->
+    </view>
+  </block>
+</block>
+<block wx:else>
+  <block wx:if="{{num==0}}">
+    <loading hidden="{{loadingHidden}}">
+      加载中请稍后...
+    </loading>
+  </block>
+  <block wx:else>
+    无法获取到openid
+  </block>
+</block>
+ <view class="noMore clear" hidden="{{hide}}">
+  没有更多内容了
+</view> 

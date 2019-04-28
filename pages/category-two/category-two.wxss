@@ -1,0 +1,184 @@
+/* pages/classnav/classnav.wxss */
+
+page, text, view, image, scroll-view {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/*精品*/
+@import "../../template/goods-list/index.wxss";
+
+page, view, text, image {
+  box-sizing: border-box;
+}
+
+page {
+  background: #f2f2f2;
+}
+
+/* 分类 start */
+
+.classNav {
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 340rpx;
+}
+
+.classNavimg {
+  width: 100%;
+  height: 240rpx;
+  position: absolute;
+  top: 100rpx;
+  left: 0;
+}
+
+.classNavscroll {
+  position: absolute;
+  padding: 20rpx;
+  z-index: 10;
+}
+
+.classNav_item {
+  width: 160rpx;
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  display: inline-block;
+  margin-right: 30rpx;
+}
+
+.classNav_item:last-child {
+  margin-right: 0;
+}
+
+.classNav_item_image {
+  padding: 10rpx;
+  background: #fff;
+  width: 160rpx;
+  height: 160rpx;
+  overflow: hidden;
+  margin-bottom: 10rpx;
+}
+
+.tab {
+  color: #ffd92c;
+}
+
+.classNav_item view {
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* 分类 end */
+
+/* 精挑细选 start */
+
+.classNavBg {
+  width: 100%;
+  height: 60rpx;
+  position: absolute;
+  bottom: 20rpx;
+}
+
+.classRight_title {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.classRight_title_word {
+  color: #fff;
+  font-size: 36rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp:1;
+  -webkit-box-orient: vertical;
+}
+
+.classRight_title_line {
+  width: 26rpx;
+  height: 2rpx;
+  background: #fff;
+  margin: 0 30rpx;
+}
+
+/* 精挑细选 end */
+
+/* 排序 start */
+
+.classNavButton {
+  display: flex;
+  justify-content: center; /*两端对齐*/
+  align-items: center; /*垂直居中*/
+  height: 72rpx;
+  background: #fff;
+  /* margin-bottom:22rpx; */
+  display: -webkit-flex;
+}
+
+.classNavButton_button {
+  flex: 1;
+  height: 56rpx;
+  border-right: 1rpx solid #e4e4e4;
+}
+
+.classNavButton .classNavButton_button:last-child {
+  border: 0;
+}
+
+.classNavButton_view {
+  width: 140rpx;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 4rpx solid #fff;
+}
+
+.classNavButton_view.navActive {
+  color: #333;
+  border-bottom: 4rpx solid #fe860f;
+}
+
+.isCan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonGroup {
+  margin-left: 10rpx;
+}
+
+.buttonGroup .arrowGray {
+  width: 0;
+  height: 0;
+  border-left: 10rpx solid transparent;
+  border-right: 10rpx solid transparent;
+  border-bottom: 10rpx solid #ccc;
+  margin: 6rpx 0;
+}
+
+.arrowOrange {
+  width: 0;
+  height: 0;
+  border-left: 10rpx solid transparent;
+  border-right: 10rpx solid transparent;
+  border-bottom: 10rpx solid #fe860f;
+  margin: 6rpx 0;
+}
+
+.arrowRotate {
+  transform: rotate(180deg);
+}
+
+/* 排序 end */

@@ -1,0 +1,86 @@
+<view class="userIndexTitle">
+  <image src="{{userInfo.avatarUrl}}" class="userIndexImg"></image>
+  <view>{{userInfo.nickName}}</view>
+</view>
+<!--pages/personal/personal.wxml-->
+<view class="mineBox">
+  <!--dingdan  -->
+  <view class="mineIndent" bindtap="indent" data-ind="0">
+    <view class="mineIndentLeft">我的订单</view>
+    <view class="mineIndentRight">查看全部订单
+      <image src="../../images/check.png" class="mineIndentRightImg"></image>
+    </view>
+  </view>
+  <!--payment  -->
+  <view class="minePayment">
+    <view class="minePaymentBox" bindtap="indent" data-ind="1">
+      <image src="../../images/manPayment.png" class="minePaymentBoxImg"></image>
+      <view class="classname">待付款</view>
+    </view>
+    <view class="minePaymentBox" bindtap="indent" data-ind="2">
+      <image src="../../images/manShipping.png" class="minePaymentBoxImg"></image>
+      <view class="classname">待发货</view>
+    </view>
+    <view class="minePaymentBox" bindtap="indent" data-ind="3">
+      <image src="../../images/madeManPayment.png" class="minePaymentBoxImg"></image>
+      <view class="classname">待收货</view>
+    </view>
+    <view class="minePaymentBox" bindtap="indent" data-ind="4">
+      <image src="../../images/wodemanreimburse.png" class="minePaymentBoxImg"></image>
+      <view class="classname">已完成</view>
+    </view>
+  </view>
+</view>
+<view class="viewList">
+  <view class="persItem">
+    <navigator url="../appointment-list/appointment-list">
+      <image src="../../images/appoint.png" class="symbols"></image>
+      <text class="presText">预约订单</text>
+      <image src="../../images/check.png" class="check"></image>
+    </navigator>
+  </view>
+  <!-- <view class="persItem">
+    <navigator url="../my-data/my-data">
+      <image src="../../images/data.png" class="symbols"></image>
+      <text class="presText">修改资料</text>
+      <image src="../../images/check.png" class="check"></image>
+    </navigator>
+  </view> 
+  <view class="persItem">
+    <navigator url="../cart/cart">
+      <image src="../../images/userCart.png" class="symbols"></image>
+      <text class="presText">我的购物车</text>
+      <image src="../../images/check.png" class="check"></image>
+    </navigator>
+  </view>-->
+  <view class="persItem">
+    <navigator url="../favorite/favorite">
+      <image src="../../images/fevorit.png" class="symbols"></image>
+      <text class="presText">商品关注</text>
+      <image src="../../images/check.png" class="check"></image>
+    </navigator>
+  </view>
+    <view class="persItem">
+    <navigator url="../address/address">
+      <image src="../../images/address.png" class="symbols"></image>
+      <text class="presText">收货地址管理</text>
+      <image src="../../images/check.png" class="check"></image>
+    </navigator>
+  </view>
+  <!-- <view class="persItem">
+    <navigator url="../history/history">
+      <image src="../../images/footmack.png" class="symbols"></image>
+      <text class="presText">浏览记录</text>
+      <image src="../../images/check.png" class="check"></image>
+    </navigator>
+  </view> -->
+  <view class="persItem" bindtap="makeAcall">
+    <image src="../../images/ttel.png" class="symbols"></image>
+    <text class="presText">商家电话  {{tel}}</text>
+    <image src="../../images/check.png" class="check"></image>
+  </view>
+</view>
+<view class="fixedBox">
+  <contact-button type="default-light"></contact-button>
+  <!-- <image class="goCart" src="../../images/center.png"></image> -->
+</view>

@@ -1,0 +1,79 @@
+<!--pages/mydata/mydata.wxml-->
+<view hidden="{{myData}}">
+  <view class="myHead">
+    <view>头像</view>
+    <view class="myData_rig" bindtap="setPhotoInfo">
+      <image class="headImg" mode="aspectFill" src="{{titleImgUrl}}" wx:if="{{titleImgUrl!=null}}"></image>
+      <image wx:else class="headImg" mode="aspectFill" src="{{userInfo.avatarUrl}}"></image>
+      <!-- <image class="arrow" mode="aspectFill" src="../../images/check.png"></image>  -->
+    </view>
+  </view>
+
+  <view class="myDataList">
+    <view class="myData">
+      <view>昵称</view>
+      <view class="myData_rig" bindtap="clickName">
+        <view>{{myNickName.realname}}</view>
+        <image class="arrow" mode="aspectFill" src="../../images/check.png"></image>
+      </view>
+    </view>
+    <view class="myData">
+      <view>手机号</view>
+      <view class="myData_rig" bindtap="clickName">
+        <view>{{myNickName.mobile}}</view>
+        <image class="arrow" mode="aspectFill" src="../../images/check.png"></image>
+      </view>
+    </view>
+    <view class="myData">
+      <view>微信号</view>
+      <view class="myData_rig" bindtap="clickName">
+        <view>{{myNickName.weixin}}</view>
+        <image class="arrow" mode="aspectFill" src="../../images/check.png"></image>
+      </view>
+    </view>
+    <view class="myData">
+      <view>性別</view>
+      <view class="myData_rig" bindtap="clickName">
+        {{array[index]}}
+        <image class="arrow" mode="aspectFill" src="../../images/check.png"></image>
+      </view>
+    </view>
+  </view>
+  <!--确定-->
+  <!-- <view class="myBut" bindtap="myBut">确定</view> -->
+</view>
+<form bindsubmit="myBut" hidden="{{myName}}">
+  <view class="myName">
+
+    <view class="items">
+      <view class="items_lf">昵称</view>
+      <view class="items_rig"><input type="text" name="realname"  bindinput="bindKeyInput" data-inputindex="0" placeholder="昵称" /></view>
+
+    </view>
+    <view class="items">
+      <view class="items_lf">手机号</view>
+      <view class="items_rig"><input type="number" name="tel"  bindinput="bindKeyInput" data-inputindex="0" placeholder="手机号" /></view>
+
+    </view>
+    <view class="items">
+      <view class="items_lf">微信号</view>
+      <view class="items_rig"><input type="text" name="weixin" bindinput="bindKeyInput" data-inputindex="0" placeholder="微信号" /></view>
+
+    </view>
+    <view class="items">
+      <view class="items_lf">性别</view>
+      <view class="items_rig">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            {{array[index]}}
+          </view>
+        </picker>
+      </view>
+
+    </view>
+  </view>
+  <view class="btnGroup">
+    <button type="default" bindtap="cancelBtn">取消</button>
+    <button formType="submit" type="primary">完成</button>
+  </view>
+</form>

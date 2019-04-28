@@ -1,0 +1,199 @@
+/*精品*/
+@import "../../../template/banner/index.wxss";
+.search {
+  padding: 16rpx 30rpx;
+  background: #F3F3F3;
+}
+.searchimg {
+  width: 600rpx;
+  height:60rpx;
+  background: #e5e5e5;
+  margin:14rpx auto;
+  border-radius: 30rpx;
+}
+.searchText {
+  width: 100%;
+  background: #fff;
+  border-radius: 8rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+  /* justify-content: center; */
+  color: #999;
+}
+.searchTextImg{
+  width:30rpx;
+  height:30rpx;
+  margin:15rpx 20rpx 0;  
+}
+
+/* 推荐商品 start */
+.recommend {
+  height: 90rpx;
+  line-height: 90rpx; 
+  background: #fff;
+  font-size: 32rpx;
+  color: #FF365C;
+  padding: 0 30rpx;
+  text-align: center
+}
+.recommend text{
+  width: 6rpx ;
+  height: 30rpx;
+  background: #FF8710;
+  margin: 30rpx 20rpx 0 0;
+  float: left;
+}
+/* 推荐商品 end */
+
+/* 分类 start */
+.classView{
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  padding:0 20rpx 30rpx 20rpx;
+}
+.classViewList{
+  width:25%;
+  text-align: center;
+}
+.classViewList image{
+  width: 90rpx;
+  height: 90rpx;
+  margin:30rpx auto 0 auto;
+  border-radius:50%;
+}
+/* 分类 start */
+
+.make {
+  width: 100%;
+  background: #fff;
+  border-bottom: 20rpx solid #F3F3F3;
+  border-top: 1rpx solid #F3F3F3;
+}
+
+.makeTal {
+  margin: 0 20rpx;
+  border-radius: 100rpx;
+  position: relative;
+}
+
+.makeimage {
+  width: 28rpx;
+  height: 26rpx;
+  margin: 30rpx 16rpx 0 26rpx;
+}
+
+.maketext {
+  line-height: 88rpx;
+  color: #2E2E2E;
+}
+
+.makebut {
+  width: 120rpx;
+  height: 38rpx;
+  line-height: 38rpx;
+  color: #fff;
+  background: #FF615A;
+  text-align: center;
+  border-radius: 5rpx;
+  font-size: 24rpx;
+  position: absolute;
+  top: 26rpx;
+  right: 0;
+}
+
+.customized{
+  display: flex;
+  justify-content: space-between;
+}
+.customized view {
+  width: 180rpx;
+  height: 160rpx;
+  float: left;
+  background: #000;
+  position: relative;
+}
+
+/* .customized view:last-child {
+  margin-right: 0;
+  background: #f00;
+} */
+
+.custimage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.custbar1 {
+  position: absolute;
+  left: 24rpx;
+  top: 18rpx;
+  color: #fff;
+  font-size: 28rpx;
+}
+
+.custbar2 {
+  position: absolute;
+  left: 24rpx;
+  top: 54rpx;
+  color: #fff;
+  font-size: 22rpx;
+}
+
+
+/* 全部 start */
+
+.allShop {
+  background: #fff;
+}
+
+.allShopTitle {
+  margin-top: 20rpx;
+  color: #444;
+  font-size: 30rpx;
+  padding: 30rpx 30rpx 10rpx 30rpx;
+}
+
+.allShopList {
+  margin: 0 20rpx 20rpx 20rpx;
+  box-shadow: 0 10rpx 20rpx rgba(0,0,0,.2)
+}
+
+.allShopImg {
+  width: 710rpx;
+  height: 320rpx;
+}
+
+.shopListTitleBg {
+  background: #F3F3F3;
+  font-size: 28rpx;
+  color: #7B7979;
+}
+.breadths{
+  line-height: 80rpx;
+  margin-right: 20rpx;
+}
+.bgTitle {
+  padding-left: 20rpx;
+  height: 80rpx;
+}
+
+.prices {
+  min-width: 135rpx;
+  height: 80rpx;
+  background: #FF615A ;
+  color: #fff;
+  text-align: center;
+  line-height: 1;
+  padding-top: 10rpx;
+}
+.prices view{
+  font-size: 22rpx;
+  line-height: 1.8;
+}
+/* 全部 end  */

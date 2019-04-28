@@ -1,0 +1,57 @@
+page{
+  background: #183448;
+  line-height: 2;
+}
+image{
+  object-fit: cover;
+}
+.application{
+  margin: 154rpx 22rpx 0 22rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+.application_mesg{
+  text-align: center;
+  position: relative;
+}
+.application_img{
+  margin-top: -64rpx;
+  width: 126rpx;
+  height: 126rpx;
+  border:6rpx solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.application_name{
+  font-size: 30rpx;
+  color: #343434;
+  margin-top: 20rpx;
+}
+.application_wx{
+  font-size: 28rpx;
+  color: #676767;
+  margin-bottom: 30rpx;
+}
+.application_code{
+  width:326rpx;
+  height: 326rpx;
+}
+.application_code_tips{
+  font-size: 24rpx;
+  color: #cbcbcb;
+  margin: 20rpx 0 40rpx 0;
+}
+.application_rule{
+  margin: 0 36rpx;
+  padding-bottom: 56rpx;
+  color: #9a9a9a;
+  font-size: 22rpx;
+}
+.application_rule_title{
+  font-size: 24rpx;
+}
+.application_rule_mesg{
+  margin: 0 30rpx 0 96rpx;
+  white-space: normal;
+  word-wrap:break-word;
+}

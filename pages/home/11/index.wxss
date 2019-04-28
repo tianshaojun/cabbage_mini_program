@@ -1,0 +1,302 @@
+/*精品*/
+ @import "../../../template/goods-list/index.wxss";
+ @import "../../../template/banner/index.wxss"; 
+ /* 预约 start */
+.make {
+    width: 100%;
+    height: 88rpx;
+    background: #fff;
+    margin-top: 20rpx;
+}
+
+.makeTal {
+    width: 100%;
+    height: 88rpx;
+    position: relative;
+}
+
+.makeimage {
+    width: 28rpx;
+    height: 26rpx;
+    margin: 30rpx 16rpx 0 26rpx;
+}
+
+.maketext {
+    line-height: 88rpx;
+    color: #fe860f;
+}
+
+.makebut {
+    position: absolute;
+    width: 88rpx;
+    height: 36rpx;
+    top: 26rpx;
+    right: 30rpx;
+    color: #ff8804;
+    border: 1rpx solid #ff8804;
+    text-align: center;
+    line-height: 32rpx;
+    border-radius: 5rpx;
+    font-size: 24rpx;
+}
+
+.navbar{  
+  background-color: rgb(243, 243, 243);
+  color: #888888;
+  
+}  
+.navbar view{  
+  display: inline-block;
+  width:140rpx;
+  text-align: center;  
+  line-height: 80rpx;
+  font-size: 28rpx;
+   margin: 10rpx 22rpx 0 22rpx;  
+}  
+.activeTop{  
+  color: #000000; 
+  border-bottom:2rpx solid #000000; 
+}  
+.navbar .item.active:after{  
+  content: "";  
+  
+  position: absolute;  
+  bottom: 0;  
+  left: 0;  
+  right: 0;  
+  height: 4rpx;  
+  background: #FFCC00;  
+}  
+.latestOnlineBox {
+  width:100%;
+
+  box-sizing: border-box;
+} 
+/*标题  */
+.indexHeadlineimg{
+  width: 6rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+  vertical-align: middle;
+  padding-bottom: 6rpx;
+}
+.indexHeadline{
+  width:100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 4rpx solid #F3F3F3;
+}
+.indexHeadlineOne{
+  font-size:30rpx;
+  font-weight: bold;
+  margin:0 12rpx 0 10rpx;
+
+}
+.indexHeadlineTow{
+  font-size:24rpx;
+  margin-left:12rpx;
+  color: #888888; 
+}
+/*推荐好书  */
+.goodBook{
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 50rpx;
+  box-sizing: border-box;
+  margin-bottom: 30rpx;
+}
+.goodBookBox{
+  width: 33%;
+  height:284rpx;
+  padding: 30rpx 50rpx 0 0;
+  box-sizing: border-box;
+}
+.goodBookImg{
+  width: 100%;
+  height:90%;
+}
+.goodBookText{
+  text-align: center;
+  font-size: 24rpx;
+  height:50rpx;
+  line-height:50rpx;
+}
+/*发现好书  */
+.discover{
+  width: 100%;
+  height:324rpx;
+  display:flex;
+  justify-content: space-between;
+  padding:25rpx;
+  box-sizing: border-box;
+}
+.discoverBoxRight{
+  width: 400rpx;
+}
+.discoverBoxLeft{
+  width:280rpx;
+  height:280rpx;
+}
+.discoverBoxImg{
+  width:400rpx;
+  height:126rpx;
+}
+.discoverBoxImgBob{
+   margin-top:16rpx; 
+}
+/*间隔  */
+.blank{
+  width:100%;
+  height:18rpx;
+  background:#dddddd;
+}
+/*推荐  */
+.recommendImg{
+  width: 160rpx;
+  height: 224rpx;
+}
+.recommends{
+  width:100%;
+}
+.recommendBox{
+  /* height: 246rpx; */
+  display: flex;
+  padding: 20rpx 0;
+  position: relative;
+  justify-content: space-around;
+  border-bottom: 4rpx solid #F3F3F3;
+  box-sizing: border-box;
+}
+.recommendPosi{
+  position: absolute;
+  right: 14rpx;
+  bottom:24rpx;
+}
+.recommendPosiOne{
+  padding: 0 20rpx;
+  color: rgb(86, 126, 184);
+  border: 3rpx solid #567EB8;
+  border-radius: 8rpx;
+  margin-right: 10rpx;
+     
+}
+.recommendPosiTow{
+  padding: 0 20rpx;
+  color: rgb(178, 178, 178);
+  border: 3rpx solid #B2B2B2;
+  border-radius: 8rpx;
+}
+.recommendBoxRight{
+  width:528rpx;
+}
+.recommendBoxRightOne{
+  width:480rpx; 
+  font-size:30rpx;
+  color: rgb(102, 102, 102);
+  line-height:50rpx;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp:1;
+  -webkit-box-orient: vertical;
+}
+.recommendBoxRightTow{
+  font-size: 28rpx;
+  color: rgb(86, 126, 184);
+  line-height:50rpx;
+}
+.recommendBoxRightThree{
+  width:526rpx;
+  height:100rpx;
+  line-height:50rpx;
+  font-size: 28rpx;
+  color: rgb(102, 102, 102);
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.base{
+  height:120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  color: rgb(153, 153, 153);
+}
+/*分类页面  */
+.classify{
+  width:100%;
+  /* height:140rpx; */
+  position:relative;
+}
+.classify text{
+  position:absolute;
+  left:43%;
+  top: 14%;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: rgb(102, 102, 102);
+}
+.classifyImg{
+  margin:30rpx 0;
+  width:100%;
+  height: 50rpx;
+  text-align: center;
+}
+.literature{
+   padding-left: 40rpx; 
+  margin-bottom:-16rpx;
+}
+.literatureImg{
+  width:315rpx;
+  height: 160rpx;
+  border-radius:15rpx;
+  margin-right: 40rpx;
+  margin-bottom: 30rpx;
+}
+.search {
+  width: 100%;
+  height:100rpx;
+  background-color: rgb(243, 243, 243);
+  position: relative;
+  border-top:1rpx solid #f3f4f5;
+}
+.searchimg {
+  width:698rpx;
+  height:60rpx;
+  background: #ffffff;
+  margin:20rpx auto;
+  border-radius: 30rpx;
+}
+
+.searchText {
+  /* width: 600rpx; */
+  height: 60rpx;
+  position: absolute;
+  top:16rpx;
+  left:250rpx;
+}
+.searchTextImg{
+  width:24rpx;
+  height:24rpx;
+   margin:25rpx 20rpx 18rpx 24rpx; 
+  float:left;
+}
+.searchTextwords{
+   float:left;
+   line-height:70rpx;
+   color:#888888;
+   font-size:26rpx;
+}
+
+/* 轮播图 */
+
+.banner {
+  width: 100%;
+  height: 340rpx;
+}
+
+
+
+

@@ -1,0 +1,66 @@
+<view class="search">
+  <navigator url="../../search/search">
+    <view class="searchimg">
+
+    </view>
+    <view class="searchText">
+      <image src="../../../images/search.png" class="searchTextImg" />
+      <text class="searchTextwords">请输入关键字</text>
+    </view>
+  </navigator>
+</view>
+<!--服装售卖 index.wxml-->
+<view class="container">
+  <!-- 轮播图 start -->
+  <view class="banner">
+    <import src="../../../template/banner/index.wxml" />
+    <template is="shops" data="{{list}}"></template>
+  </view>
+  <!-- 轮播图 end  -->
+  <!-- <view>
+    <image class='activity' src='../../images/hd.jpg'></image>
+  </view> -->
+  <!-- 预约 -->
+  <view class="make">
+    <view class="makeTal">
+      <navigator url="../../appointment/appointment">
+        <image src="../../../images/tel.png" class="makeimage" />
+        <text class="maketext">预约您的定制服务</text>
+        <view class="makebut">去预约</view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 分类 start -->
+  <view class='classIficationCon'>
+    <block wx:for="{{list.category_sub}}" wx:key="classViewList">
+      <navigator class='classIfication' url="../../category-two/category-two?index={{index}}&title={{item.name}}&categoryId={{item.id}}&popular=1">
+        <image class='ificationImg' src="{{item.thumb}}" mode="aspectFill"></image>
+        <view class='ificationTitle overflow'>{{item.name}}</view>
+      </navigator>
+    </block>
+  </view>
+  <!-- 分类 end -->
+  <!-- 全部 start -->
+  <block wx:for="{{list.goods}}" wx:key="image">
+    <view class='allShop'>
+      <navigator url="../../goods-detail/goods-detail?goodsid={{item.id}}&id={{item.id}}">
+        <view class='allShopTitle clearfix'>
+          <view class='flRight'>查看详情></view>
+        </view>
+        <view class='allShopList'>
+          <image class='allShopImg' src="{{item.thumb}}" mode="aspectFill"></image>
+          <view class='shopListTitleBg txt'>
+            <view class='bgTitle'>
+              <view class="breadths">{{item.title}}</view>
+              <text class='prices'>￥{{item.marketprice}}</text>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </block>
+  <!-- 全部 end -->
+</view>
+<view class="noMore clear" hidden="{{hide}}">
+  没有更多内容了
+</view>

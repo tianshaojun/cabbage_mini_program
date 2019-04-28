@@ -1,0 +1,59 @@
+<!-- 搜索 start -->
+<view class="search">
+  <navigator url="../../search/search">
+    <view class="searchText">
+      <image src="../../../images/search.png" class="searchTextImg" />
+      <text>搜索您想要的宝贝</text>
+    </view>
+  </navigator>
+</view>
+<!-- 搜索 end -->
+
+<!-- 轮播图 start -->
+<import src="../../../template/banner/index.wxml" />
+<template is="shops" data="{{list}}"></template>
+<!-- 轮播图 end -->
+<!-- 分类 start -->
+<view class="classView">
+  <block wx:for="{{list.category_sub}}" wx:key="classViewList">
+    <navigator class="classViewList" url="../../category-two/category-two?index={{index}}&title={{item.name}}&categoryId={{item.id}}&popular=1">
+      <image src="{{item.thumb}}" mode="aspectFill"></image>
+      <view class="overflow">{{item.name}}</view>
+    </navigator>
+  </block>
+</view>
+<!-- 分类 end -->
+<!-- 预约 -->
+<view class="make">
+  <view class="makeTal">
+    <navigator url="../../appointment/appointment">
+      <text class="maketext">定制您的预约服务</text>
+      <view class="makebut">点击预约</view>
+    </navigator>
+  </view>
+</view>
+
+<!-- 推荐商品 start -->
+<view class="recommend">推荐产品</view>
+
+<block wx:for="{{list.goods}}" wx:key="image">
+  <view class='allShop'>
+    <navigator url="../../goods-detail/goods-detail?goodsid={{item.id}}&id={{item.id}}">
+      <view class='allShopList'>
+        <image class='allShopImg' src="{{item.thumb}}" mode="aspectFill"></image>
+        <view class='shopListTitleBg txt'>
+          <view class='bgTitle flex space_between'>
+            <view class="breadths overflow">{{item.title}}</view>
+            <view class='prices flex_shrink'>购买
+              <view>￥{{item.marketprice}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</block>
+<!-- 推荐商品 end -->
+<view class="noMore clear" hidden="{{hide}}">
+  没有更多内容了
+</view>

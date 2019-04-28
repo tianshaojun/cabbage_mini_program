@@ -1,0 +1,87 @@
+/* pages/paystate/paystate.wxss */
+
+/*支付成功*/
+
+.container {
+  font-size: 30rpx;
+}
+
+.paysuccessbgimg {
+  width: 730rpx;
+  height: 799rpx;
+  display: block;
+  margin: 90rpx auto;
+}
+
+.paysuccessbgimg  image {
+  width: 100%;
+  height: 100%;
+}
+
+.payinfo {
+  position: absolute;
+  top: 350rpx;
+  width: 750rpx;
+}
+
+.payinfotitle {
+  text-align: center;
+  width: 750rpx;
+}
+
+.infowarn {
+  color: #b3b3b3;
+  margin: 10rpx 20rpx;
+}
+
+.payinfonum {
+  margin-left: 127rpx;
+  margin: 20rpx 130rpx 20rpx 40rpx;
+}
+
+.payinfochild {
+  float: right;
+}
+
+.infobt {
+  font-size: 28rpx;
+  text-align: center;
+  width: 275rpx;
+  height: 60rpx;
+  border-radius: 10rpx;
+  line-height: 60rpx;
+  border: 2rpx solid #a0a0a0;
+}
+
+/*支付成功 end */
+
+/*失败*/
+
+.payinfodefeated {
+  margin: 60rpx 60rpx 100rpx 60rpx;
+}
+
+.newinfobt {
+  border: 2rpx solid #ff2e5a;
+  color: #ff2e5a;
+  font-size: 28rpx;
+  text-align: center;
+  width: 275rpx;
+  height: 60rpx;
+  border-radius: 10rpx;
+  line-height: 60rpx;
+  margin: 0 auto;
+}
+
+.btnGroup{
+  display: box;
+  display: -webkit-box;
+}
+.btnGroup navigator,.btnGroup view{
+  flex:1;
+  -webkit-flex:1;
+  box-flex:1;
+  -webkit-box-flex:1;
+  /* width:40%; */
+  margin: 30rpx 50rpx;
+}

@@ -1,0 +1,167 @@
+/**首页 index.wxss**/
+
+/* 搜索 start */
+@import "../../../template/banner/index.wxss";
+page {
+    background-color: #f4f4f4;
+}
+
+.search {
+    border: 2px solid #fff;
+    background: #fff;
+    height: 98rpx;
+}
+
+.searchimg {
+    width: 670rpx;
+    height: 58rpx;
+    margin: 20rpx auto;
+    border-radius: 16rpx;
+    border: 2rpx solid #c5bdbd;
+}
+
+.searchTextImg {
+    width: 42rpx;
+    height: 40rpx;
+    margin: 8rpx 0 0 25rpx;
+    float: left;
+    vertical-align: middle;
+}
+
+/* 搜索 end  */
+
+/* 轮播图 start */
+
+.swiper {
+    height: 380rpx;
+}
+
+.slideImage {
+    width: 100%;
+    height: 100%;
+}
+
+/* 轮播图 end  */
+
+/* 预约 start */
+
+.make {
+    width: 100%;
+    height: 88rpx;
+    background: #fff;
+    margin-top: 20rpx;
+}
+
+.makeTal {
+    width: 100%;
+    height: 88rpx;
+    position: relative;
+}
+
+.makeimage {
+    width: 28rpx;
+    height: 26rpx;
+    margin: 30rpx 16rpx 0 26rpx;
+}
+
+.maketext {
+    line-height: 88rpx;
+    color: #fe860f;
+}
+
+.makebut {
+    position: absolute;
+    width: 88rpx;
+    height: 36rpx;
+    top: 26rpx;
+    right: 30rpx;
+    color: #ff8804;
+    border: 1rpx solid #ff8804;
+    text-align: center;
+    line-height: 32rpx;
+    border-radius: 5rpx;
+    font-size: 24rpx;
+}
+
+/* 预约 end  */
+
+/* 分类 start */
+
+.classIficationCon {
+    margin-top: 20rpx;
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    padding: 0 10rpx;
+}
+
+.classIfication {
+    padding-top: 20rpx;
+    width: 25%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.ificationImg {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+}
+
+.ificationTitle {
+    padding: 10rpx 0 20rpx 0;
+    font-size: 26rpx;
+    color: #444;
+}
+
+/* 分类 end  */
+
+/* 全部 start */
+
+.allShop {
+    margin-top: 20rpx;
+    background: #fff;
+}
+
+.allShopTitle {
+    color: #444;
+    font-size: 32rpx;
+    padding-top: 30rpx;
+    text-align: center;
+}
+
+.allShopList {
+    margin: 10rpx 15rpx;
+    background: #fff;
+}
+
+.shopList {
+    float: left;
+    padding: 15rpx;
+}
+
+.allShopImg {
+    width: 332rpx;
+    height: 286rpx;
+}
+
+.shopListTitleBg {
+    width: 330rpx;
+    height: 46rpx;
+    line-height: 46rpx;
+    margin-top: -46rpx;
+    background-color: rgba(0, 0, 0, 0.48);
+    text-align: center;
+    font-size: 28rpx;
+    color: #fff;
+    z-index: 1000;
+    position: relative;
+}
+
+.bgTitle {
+    width: 310rpx;
+    margin: 0 10rpx;
+}
+
+/* 全部 end  */

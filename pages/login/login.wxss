@@ -1,0 +1,89 @@
+/* pages/login/login.wxss */
+.logo{
+   position:fixed;
+  /* text-align: center;  */
+  width:100%;
+  height:100%;
+}
+.logoBg{
+  width:750rpx;
+  /* height:462rpx; */
+    height:100%;  
+}
+.logoImage{
+ position: absolute;
+ left:300rpx;
+ top:0;
+ text-align: center;
+  width:125rpx; 
+}
+/* .loginbg{
+  background:rgba(255,106,91,1);
+  width:100%;
+  height:300rpx;
+  position: fixed;
+  left:0;
+  bottom:0;
+}
+
+.loginbg view{
+  padding-top:20rpx;
+  color:#fff;
+  text-align: center;
+  font-size:60rpx;
+} */
+.version{
+  position:fixed;
+  right:11rpx;
+  bottom:13rpx;
+  color:#fff;
+  opacity: 0.3;
+  background: #ccc;
+  padding:0 10rpx;
+  border-radius:30rpx;
+  font-size:20rpx;
+}
+.g-login{
+  width:100%;
+  height:100%;
+  position: fixed;
+  top:0;
+  left:0;
+  background:rgba(0, 0, 0, .4);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.g-login>view{
+  width:600rpx;
+  height:450rpx;
+  background: #fff;
+  border-radius:15rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size:26rpx;
+}
+.g-login>view image{
+  width:80rpx;
+  height:80rpx;
+  display: block;
+  margin:auto;
+}
+.cg-butop{
+  margin:30rpx;
+}
+.cg-col{
+  color:#FF6C53;
+}
+.getUserInfo{
+  width:200rpx;
+  height:55rpx;
+  line-height: 55rpx;
+  background: #FF6C53;
+  color:#fff;
+  margin-top:30rpx;
+  font-size: 26rpx;
+}

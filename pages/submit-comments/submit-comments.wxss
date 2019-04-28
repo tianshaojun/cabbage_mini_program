@@ -1,0 +1,108 @@
+/* 发布帖子 */
+page{
+  background: #f5f5f5 ;
+}
+view,text,image,input,button,textarea{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+button::after{
+  border:none;
+}
+.clearfix:after{
+  clear: both;
+  display: block;
+  visibility: hidden;
+  content: '';
+  height: 0;
+  background: #fff;
+}
+.submitBtn{
+  background: #fb5660;
+}
+/* 填写内容 start */
+.release{
+  /* border-top: 1rpx solid #e5e5e5; */
+  border-bottom: 1rpx solid #e5e5e5;
+  background: #fff;
+  font-size: 28rpx;
+  line-height: 1.6;
+  display: flex;
+  padding: 20rpx 26rpx;
+  align-items: center;
+}
+.release image{
+  width:76rpx;
+  height: 76rpx;
+  border-radius: 4rpx;
+  border:1rpx solid #e5e5e5;
+  margin-right: 20rpx;
+}
+.releaseTitle{
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.release_main,.release_title{
+  width: 100%;
+}
+.release_title{
+  border-bottom: 1rpx solid #e5e5e5;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 24rpx;
+}
+.release_main{
+  padding: 24rpx;
+  height: 256rpx;
+}
+.communityWords{
+  background: #fff;
+  padding: 30rpx 24rpx;
+  width: 100%;
+}
+/* 填写内容 end */
+
+/*添加照片*/
+.commenttjcontainer {
+  padding: 20rpx 0 20rpx 24rpx;
+  margin-bottom: 120rpx;
+  background: #fff;
+}
+
+.commenttjimg {
+  width: 162rpx;
+  height: 160rpx;
+  line-height: 160rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  float: left;
+  vertical-align: middle;
+  position: relative;
+}
+.commenttjimg image{
+  width: 162rpx;
+  height: 160rpx;
+}
+/*.添加照片 end */
+
+/* 按钮 start */
+.delBtn{
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  display: block;
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  background: #8d8d8d;
+  border-radius: 50%;
+  position: absolute;
+  right: -6rpx;
+  top: -6rpx;
+  overflow: hidden;
+  transform: rotate(45deg);
+}
+
+/* 按钮 end */

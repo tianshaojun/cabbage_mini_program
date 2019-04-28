@@ -1,0 +1,60 @@
+<!--pages/classnav/classnav.wxml-->
+<!-- 分类 start -->
+<view class="classNav" wx:if="{{list.category_sub.length>0}}">
+  <image src="../../images/classNavBg.png" class="classNavimg"></image>
+  <scroll-view scroll-x="true" style="white-space: nowrap;" class="classNavscroll">
+    <block wx:for="{{list.category_sub}}" wx:key="classification">
+      <view class="classNav_item {{tab==index?'tab':''}}" bindtap="tabNav" data-name="{{item.name}}" data-id="{{item.id}}" data-index="{{index}}">
+        <image class="classNav_item_image" src="{{item.thumb}}" mode="aspectFill"></image>
+        <view class="classname">{{item.name}}</view>
+      </view>
+    </block>
+  </scroll-view>
+  <view class="classNavBg">
+    <view class="classRight_title">
+      <view class="classRight_title_line"></view>
+      <view class="classRight_title_word">{{name}}·精挑细选</view>
+      <view class="classRight_title_line"></view>
+    </view>
+  </view>
+</view>
+<!-- 分类 end -->
+
+<!-- 排序 start-->
+<view class="classNavButton">
+  <block wx:for="{{clickNav}}" wx:key="clickNav">
+    <view class="classNavButton_button isCan">
+      <view class="classNavButton_view {{nav==index?'navActive':''}}" data-nav="{{index}}" bindtap="navChange">
+        <view bindtap="clickNav">{{item}}</view>
+        <view class="buttonGroup">
+          <block wx:if="{{index==sortIndex?'navActive':''}}">
+            <view class="{{desc?'arrowOrange':'arrowGray'}}"></view>
+            <view class="arrowRotate {{!desc?'arrowOrange':'arrowGray'}}"></view>
+          </block>
+          <block wx:else>
+            <view class="arrowGray"></view>
+            <view class="arrowRotate arrowGray"></view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+<!-- 排序 end -->
+
+<block wx:if="{{list.goods.length>0}}">
+  <import src="../../template/goods-list/index.wxml" />
+  <view class="bout">
+    <template is="boutique" data="{{list,redic}}"></template>
+    <view style="clear:both;"> </view>
+  </view>
+  <view class="noMore clear">
+    没有更多内容了
+  </view>
+</block>
+<block wx:else>
+  <view class="morePro">
+    <image src="../../images/more.png" class="moreimg"></image>
+    <view class="">暂无商品，请搜索其他商品看看吧！</view>
+  </view>
+</block>

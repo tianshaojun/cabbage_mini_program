@@ -1,0 +1,73 @@
+<!-- 搜索 start -->
+<view class="search">
+  <navigator url="../../search/search">
+    <view class="searchText">
+      <image src="../../../images/search.png" class="searchTextImg" />
+      <text>搜索你喜欢的商品</text>
+    </view>
+  </navigator>
+</view>
+<!-- 搜索 end -->
+<!-- 轮播图 -->
+<view class="banner">
+  <import src="../../../template/banner/index.wxml" />
+  <template is="shops" data="{{list}}"></template>
+</view>
+
+
+<!--推荐  -->
+<view class="fruitsMendTows" style="width:100%;overflow:hidden;">
+  <scroll-view class="latestOnlineBox" scroll-x="true" style="white-space: nowrap; ">
+    <navigator class="fruitsMendTowsBox" wx:for="{{list.category_sub}}" wx:key="classViewList" url="../../category-two/category-two?index={{index}}&title={{item.name}}&categoryId={{item.id}}&popular=1">
+      <image src="{{item.thumb}}" class="fruitsMendImgT"></image>
+      <view class="overflow">{{item.name}}</view>
+    </navigator>
+  </scroll-view>
+</view>
+
+<!-- 预约 -->
+<view class="make">
+  <view class="makeTal">
+    <navigator url="../../appointment/appointment">
+      <image src="../../../images/tel.png" class="makeimage" />
+      <text class="maketext">预约您的定制服务</text>
+      <view class="makebut">去预约</view>
+    </navigator>
+  </view>
+</view>
+<!-- 预约 end  -->
+
+<view class="recommend">
+  <view class="recommendtitle">
+    <image src="../../../images/titleleft.png" class="titleleftimg"></image>
+    精选宝贝
+    <image src="../../../images/titleright.png" class="titlerightimg"></image>
+  </view>
+</view>
+
+<view class="fruitsMendTow">
+  <view class="jxcon">
+    <navigator class="jxnav" wx:for="{{ishotShop}}" wx:key="classViewList" url="../../goods-detail/goods-detail?id={{item.id}}&goodsid={{item.id}}">
+      <view class="jxchild">
+        <image src="{{item.thumb}}" mode="aspectFill" class="jxcoinimg"></image>
+        <view class="ishotShop-title">{{item.title}}</view>
+        <view class="ishotShop-price">￥{{item.marketprice}}</view>
+      </view>
+    </navigator>
+  </view>
+
+</view>
+
+<!--首页产品  -->
+<view class="recommend">
+  <view class="recommendtitle">
+    <image src="../../../images/titleleft.png" class="titleleftimg"></image>
+    热门推荐
+    <image src="../../../images/titleright.png" class="titlerightimg"></image>
+  </view>
+</view>
+<import src="../../../template/goods-list/index.wxml" />
+<template is="boutique1" data="{{list,redic}}"></template>
+<view class="noMore clear" hidden="{{hide}}">
+  没有更多内容了
+</view>

@@ -1,0 +1,25 @@
+<!-- 支付成功或失败 pages/paystate/paystate.wxml-->
+
+<!--支付成功容器-->
+<view class="container">
+  <view class="paysuccessbgimg">
+    <image src="../../images/success.png"></image>
+  </view>
+  <view class="payinfo">
+    <view class="payinfotitle">下单成功</view>
+    <view class="payinfonum infowarn">订单号：
+      <text class="payinfochild">{{payinfo.ordersn}}</text>
+    </view>
+
+    <view class="payinfonum infowarn">订单金额：
+      <text class="payinfochild">￥{{payinfo.price}}</text>
+    </view>
+    <view class="btnGroup">
+      <view class="infobt" bindtap="bindViewTab" data-method="gohome">继续逛逛</view>
+      <view class="infobt" bindtap="bindViewTab" wx:if="{{payinfo.price!=0.00}}" data-method="paynow" hidden='{{payok}}'>立即支付</view>
+      <view class="infobt" bindtap="bindViewTab" data-method="goorder" hidden='{{!payok}}'>查看订单</view>
+    </view>
+  </view>
+</view>
+
+<!--支付成功 end -->

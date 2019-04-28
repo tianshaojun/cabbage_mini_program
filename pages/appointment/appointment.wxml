@@ -1,0 +1,27 @@
+<form bindsubmit="formSubmit">
+   <view class="formMesg">
+      <view class="items">
+         <view class="items_lf">姓名</view>
+         <view class="items_rig"><input type="text" name="realname" value="{{realname}}" bindinput="bindKeyInput" placeholder="姓名" /></view>
+      </view>
+      <view class="items">
+         <view class="items_lf">手机号</view>
+         <view class="items_rig"><input type="number" name="mobile" maxlength="11" value="{{mobile}}" bindinput="bindKeyInput" placeholder="11位手机号" /></view>
+      </view>
+      <view class="items">
+         <view class="items_lf">预约类型</view>
+         <view class="items_rig">
+            <picker mode="selector" bindchange="bindRegionChange" range="{{str_arr}}" value="{{index}}">
+               {{str_arr[index]}}
+            </picker>
+         </view>
+         <!-- <view class="items_del hidden">+</view> -->
+      </view>
+   </view>
+   <view class="remarks">
+      <view class="items_lf">备注/发票</view>
+      <view class="items_Remark"><textarea class="remarkText" type="text" name="remark" value="{{remark}}" bindinput="bindKeyInput" placeholder="请输入备注信息" /></view>
+   </view>
+
+   <button formType="submit" class="submitBtn">立即预约</button>
+</form>

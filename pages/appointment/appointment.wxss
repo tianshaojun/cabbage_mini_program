@@ -1,0 +1,83 @@
+.form button{
+  margin-bottom: 40rpx;
+}
+.formMesg{
+  background: #fff;
+  padding-left: 24rpx;
+}
+.items{
+  display: flex;
+  justify-content: space-between;
+  height: 88rpx;
+  line-height: 88rpx;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1rpx solid #e5e5e5;
+  /* border:1 */
+}
+.items:last-child{
+  border-bottom: none;
+}
+.items_lf{
+  color: #323232;
+  font-size: 28rpx;
+  width: 160rpx;
+}
+.items_rig{
+  padding: 0 20rpx;
+  width: 522rpx;
+}
+.items_rig input{
+  height: 88rpx;
+  line-height: 88rpx;
+  display: block;
+  width: 100%;
+}
+.items_del{
+  width: 40rpx;
+  height: 40rpx;
+  background: #999;
+  color: #fff;
+  font-size: 40rpx; 
+  line-height: 40rpx;
+  text-align: center;
+  transform: rotate(135deg);
+  border-radius: 50%;
+  overflow: hidden; 
+  margin: 24rpx 24rpx 0 0;
+}
+.hidden{
+  visibility: hidden;
+}
+.tips{
+  padding: 10rpx 24rpx 40rpx 24rpx;
+}
+.items_Remark{
+   margin: 0 20rpx;
+}
+.remarkText{
+   width: 100%;
+}
+/*按钮*/
+.submitBtn{
+  background: #fb5660;
+  font-size: 36rpx;
+  color: #fff;
+  height: 98rpx;
+  line-height: 98rpx;
+  padding: 0;
+  border-radius:0;
+  position: fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+}
+.remarks{
+  width:100%;
+  background: #fff;
+  height:382rpx;
+  margin-top:20rpx;
+}
+.remarks .items_lf{
+  padding:26rpx 0 0 24rpx;
+}

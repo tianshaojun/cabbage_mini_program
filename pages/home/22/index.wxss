@@ -1,0 +1,213 @@
+/*精品*/
+@import "../../../template/goods-list/index.wxss";
+@import "../../../template/banner/index.wxss";
+
+page {
+  background: #f7f7f7;
+}
+
+.search {
+  padding: 16rpx 30rpx;
+  background: #ff6a5b;
+}
+
+.searchimg {
+  width: 600rpx;
+  height: 60rpx;
+  background: #e5e5e5;
+  margin: 14rpx auto;
+  border-radius: 30rpx;
+}
+
+.searchText {
+  width: 100%;
+  background: #fff;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+  /* justify-content: center; */
+  color: #999;
+  border-radius: 8rpx;
+}
+
+.searchTextImg {
+  width: 30rpx;
+  height: 30rpx;
+  margin: 15rpx 20rpx 0;
+}
+
+/* 推荐商品 start */
+
+.recommend {
+  height: 60rpx;
+  /* margin-top: 20rpx; */
+  background: #fff;
+  font-size: 32rpx;
+  color: #222;
+  /* padding: 0 30rpx; */
+}
+
+.recommend text {
+  display: block;
+  width: 150rpx;
+  height: 48rpx;
+  /* background: #ff6a5b; */
+  margin: auto;
+  text-align: center;
+  color: #333;
+  line-height: 48rpx;
+  font-size: 28rpx;
+}
+
+/* 推荐商品 end */
+
+/* 分类 start */
+
+.classView {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  padding-bottom: 30rpx;
+}
+
+.classViewList {
+  width: 20%;
+  text-align: center;
+}
+
+.classViewList image {
+  width: 96rpx;
+  height: 96rpx;
+  margin: 30rpx auto 0 auto;
+  border-radius: 50%;
+}
+
+/* 分类 start */
+
+.make {
+  width: 100%;
+  height: 88rpx;
+  background: #fff;
+  margin: 8rpx 0;
+}
+
+.makeTal {
+  width: 100%;
+  height: 88rpx;
+  position: relative;
+  /* border-bottom: 1px solid #999; */
+}
+
+.makeimage {
+  width: 28rpx;
+  height: 26rpx;
+  margin: 30rpx 16rpx 0 26rpx;
+}
+
+.maketext {
+  line-height: 88rpx;
+  color: #666;
+  margin-left: 30rpx;
+}
+
+.makebut {
+  position: absolute;
+  width: 120rpx;
+  height: 47rpx;
+  top: 26rpx;
+  right: 30rpx;
+  color: #fff;
+  border: 1rpx solid #ff8804;
+  text-align: center;
+  line-height: 45rpx;
+  border-radius: 5rpx;
+  font-size: 24rpx;
+  background: #ff615a;
+}
+
+.customized {
+  display: flex;
+  justify-content: space-between;
+}
+
+.customized view {
+  width: 180rpx;
+  height: 160rpx;
+  float: left;
+  background: #000;
+  position: relative;
+}
+
+/* .customized view:last-child {
+  margin-right: 0;
+  background: #f00;
+} */
+
+.custimage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.custbar1 {
+  position: absolute;
+  left: 24rpx;
+  top: 18rpx;
+  color: #fff;
+  font-size: 28rpx;
+}
+
+.custbar2 {
+  position: absolute;
+  left: 24rpx;
+  top: 54rpx;
+  color: #fff;
+  font-size: 22rpx;
+}
+.latestOnlineBox{
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+.fruitsMendTow {
+  padding: 0 0 20rpx 36rpx;
+  display: flex;
+  justify-content: space-around;
+  /* border-bottom:2rpx solid #dddddd; */
+  background: #fff;
+    overflow-x:scroll;
+}
+
+.fruitsMendTowBox {
+  margin-right: 42rpx;
+  width: 180rpx;
+  min-height: 330rpx;
+  display: inline-block;
+  border: 1px solid #eee;
+  background: #fff;
+  padding: 16rpx;
+}
+
+.fruitsMendTowBox view {
+  text-align: center;
+}
+
+.fruitsMendImgT {
+  width: 148rpx;
+  height: 148rpx;
+}
+.ishotShop-title{
+  overflow: hidden;
+   white-space : pre-wrap ;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  width:148rpx;
+  margin-top:38rpx;
+}
+.ishotShop-price{
+  color:#FF3355;
+  margin-top:25rpx;
+}

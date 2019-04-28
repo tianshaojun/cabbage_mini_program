@@ -1,0 +1,282 @@
+/*精品*/
+ @import "../../../template/goods-list/index.wxss";
+ @import "../../../template/banner/index.wxss"; 
+ .listar {
+  background: #F5F5F5; 
+}
+.search {
+  width: 100%;
+  height: 100rpx;
+  background: #1DCBC0;
+  position: relative;
+  border-top:1rpx solid #1DCBC0;
+}
+.searchimg {
+  width: 700rpx;
+  height:60rpx;
+  background:#FFFFFF;
+  margin:20rpx auto;
+  border-radius:46rpx;
+
+}
+
+.searchText {
+  /* width: 600rpx; */
+  height: 60rpx;
+  position: absolute;
+  top:22rpx;
+  left: 280rpx;
+}
+.searchTextImg{
+  width:24rpx;
+  height:24rpx;
+   margin:21rpx 20rpx 15rpx 24rpx;  
+  float:left;
+}
+.searchTextwords{
+   float:left;
+   line-height:60rpx;
+   color:#cdcdcd;
+   font-size:26rpx;
+}
+
+/* 轮播图 */
+
+.banner {
+  width: 100%;
+}
+
+
+/* 预约 start */
+.make {
+  width: 100%;
+  height: 120rpx;
+  background: #F5F5F5;
+  position: relative;
+}
+
+.makeTal {
+  width:700rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 20rpx;
+  left: 26rpx;
+  border-radius: 40rpx;
+  background:#FFFFFF;
+}
+
+.makeimage {
+  width: 28rpx;
+  height: 26rpx;
+  margin: 30rpx 16rpx 0 26rpx;
+}
+
+.maketext {
+  line-height:80rpx;
+  /* color: #fe860f; */
+}
+
+.makebut {
+  position: absolute;
+  width: 88rpx;
+  height: 36rpx;
+  top: 22rpx;
+  right: 30rpx;
+  color: #fff;
+  border: 1rpx solid #1DCBC0;
+  text-align: center;
+  line-height: 32rpx;
+  border-radius: 5rpx;
+  font-size: 24rpx;
+  background: #1DCBC0;
+}
+/* 预约 end */
+
+
+
+/*推荐分类  */
+.recommend{
+  display: flex;
+}
+
+.make1 {
+  width: 100%;
+  background: #fff;
+}
+
+.makeTal1 {
+  width: 100%;
+  height: 100rpx;
+  padding-top:24rpx;
+}
+.makeTal1s{
+  width: 160rpx;
+  height: 52rpx;
+  border-top-right-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+  background: #FCB64E;
+}
+.makeTals{
+  width: 100%;
+  text-align: center;
+}
+.makeimage1 {
+  width: 58rpx;
+  height: 4rpx;
+  vertical-align: middle;
+  padding-bottom: 10rpx;
+}
+
+.maketext1 {
+  line-height:52rpx;
+  font-size: 30rpx;
+  color: #fff;
+  margin-left: 24rpx;
+}
+
+.customized{
+  display: flex;
+}
+
+.makeTalTowBox{
+  padding:0 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.makeTalTowImg{
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.makeTalTow {
+  margin-bottom: 20rpx;
+  width: 25%;
+  padding: 0 20rpx;
+}
+
+.makeTalTow view{
+  width: 150rpx;
+  font-size: 30rpx;
+  text-align: center; 
+  overflow: hidden;
+  white-space: nowrap; 
+  text-overflow: ellipsis;   
+}
+.latestOnlineBox {
+  width:100%;
+  border-top:2rpx solid #E6E6E6;
+  box-sizing: border-box;
+} 
+.fruitsMendTow{
+  display:flex;
+  justify-content: space-around;
+   border-bottom:2rpx solid #dddddd;
+}
+.fruitsMendTowBox{
+  border-right: 2rpx solid #E6E6E6;
+  margin:20rpx 0 20rpx 0;
+  padding:0 20rpx 0 20rpx;
+  width:180rpx;
+  height: 278rpx;
+  display: inline-block;
+
+}
+.makeTal1a{
+  width: 160rpx;
+  height: 52rpx;
+  border-top-right-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+  background: #1DCBC0;
+}
+.fruitsMendTowBox view{
+  text-align: center;
+  line-height: 34rpx;
+  padding-top: 16rpx;
+  padding-bottom: 66rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.fruitsMendImgT{
+  width:140rpx;
+  height:140rpx;
+  box-sizing:border-box;
+  margin-bottom: 40rpx;
+}
+
+/*zhuti  */
+.caseMainBox {
+  white-space: nowrap;
+  display: flex;
+  height: 203rpx;
+  padding: 10rpx 0 30rpx 0;
+}
+.brandBox{
+  white-space: nowrap;
+  display: flex;
+  height: 153rpx;
+  padding: 0 0 35rpx 0;
+}
+.caseMain {
+  display: inline-block;
+}
+.caseMainImg {
+  width: 375rpx;
+  height: 203rpx;
+  background:rebeccapurple;
+}
+.caseMainImg1 {
+  width: 375rpx;
+  height: 203rpx;
+  background:yellow;
+ 
+}
+.brandImg{
+  width: 153rpx;
+  height: 153rpx;
+  background:rebeccapurple;
+  border: 1rpx solid red;
+}
+.myOne{
+  width: 100%;
+  height: 30rpx;
+  background: #e6e6e6;
+}
+
+/*热卖  */
+.likeBox{
+  display: flex;
+  padding-left:40rpx; 
+  flex-wrap: wrap;
+}
+
+.like{
+  box-sizing: border-box;
+  margin-right: 25rpx;
+}
+.likeImg{
+  width:324rpx;
+  height: 350rpx;
+  border-radius: 10rpx;
+}
+.likeFont{
+  width: 306rpx;
+  font-size: 26rpx;
+  margin:10rpx auto 0 auto;
+  display:-webkit-box;
+  overflow:hidden;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  line-height:1.5;
+}
+.likeOne{
+  color: #fe0000;
+  font-size: 24rpx;
+  margin-right: 13rpx;
+}
+.likeTow{
+  color: #8f8f8f;
+  font-size: 24rpx;
+}

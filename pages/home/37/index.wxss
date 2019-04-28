@@ -1,0 +1,276 @@
+/*精品*/
+@import "../../../template/goods-list/index.wxss";
+@import "../../../template/banner/index.wxss";
+/*搜索  */
+page {
+  background: rgb(238, 238, 238);
+}
+.search {
+  padding: 16rpx 30rpx;
+  background: #efeff4;
+}
+.searchText{
+  position: relative;
+}
+.searchTextSou{
+  width: 120rpx;
+  background: #e5e5e5;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  right: 0;
+  border-top-right-radius: 8rpx;
+  border-bottom-right-radius: 8rpx;
+}
+.searchimg {
+  width: 600rpx;
+  height: 60rpx;
+  background: #e5e5e5;
+  margin: 14rpx auto;
+  border-radius: 30rpx;
+}
+
+.searchText {
+  width: 100%;
+  background: #fff;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+  color: #888888;
+  border-radius: 8rpx;
+}
+
+.searchTextImg {
+  width: 30rpx;
+  height: 30rpx;
+  margin: 15rpx 20rpx 0;
+}
+/*推荐分类  */
+.fruitsMendImg{
+  width: 50%;
+  height: 200rpx;
+  padding:10rpx;
+  box-sizing:border-box;
+}
+.latestOnlineBox {
+  width:100%;
+
+  box-sizing: border-box;
+} 
+.fruitsMendTows{
+  display:flex;
+  justify-content: space-around;
+  padding:6rpx 6rpx 6rpx 6rpx; 
+  background: #ffffff;
+}
+.fruitsMendTowsBox{
+  width:25%;
+  display: inline-block;
+  padding: 10rpx 0;
+}
+.fruitsMendTowsBox view{
+  text-align: center;
+  line-height: 26rpx;
+}
+.fruitsMendImgT{
+  width:100%;
+  height:176rpx;
+  box-sizing:border-box;
+  margin-bottom: 30rpx;
+  /* border-radius: 50%; */
+}
+
+/* 轮播图 */
+.banner {
+  width: 100%;
+  height:360rpx;
+}
+
+/* 预约 start */
+.make {
+  width: 100%;
+  height: 88rpx;
+  background: #fff;
+  margin: 8rpx 0;
+}
+
+.makeTal {
+  width: 100%;
+  height: 88rpx;
+  position: relative;
+  /* border-bottom: 1px solid #999; */
+}
+
+.makeimage {
+  width: 28rpx;
+  height: 26rpx;
+  margin: 30rpx 16rpx 0 26rpx;
+}
+
+.maketext {
+  line-height: 88rpx;
+  color: #666;
+  margin-left: 30rpx;
+}
+
+.makebut {
+  position: absolute;
+  width: 120rpx;
+  height: 47rpx;
+  top: 26rpx;
+  right: 30rpx;
+  color: #fff;
+  border: 1rpx solid #ff8804;
+  text-align: center;
+  line-height: 45rpx;
+  border-radius: 5rpx;
+  font-size: 24rpx;
+  background: #ff615a;
+}
+
+/* 预约 end  */
+.recommend {
+  height: 80rpx;
+  background: #fff;
+  font-size: 32rpx;
+  color: #222;
+}
+
+.recommend text {
+  display: block;
+  width: 150rpx;
+  text-align: center;
+  color: #333;
+  line-height: 80rpx;
+  font-size: 28rpx;
+}
+.headline{
+  border-bottom: 2rpx solid #efeff4;
+}
+/* 首页公共 */
+page,view,text,image{
+  box-sizing: border-box;
+} 
+.bar {
+  width: 100%;
+  height:48rpx;
+  position:relative;
+  background: #fff;
+}
+.barView{
+  width:150rpx;
+  height:100%;
+  color:#fff;
+  background: #fb5660;
+  font-size:28rpx;
+  text-align: center;
+  line-height:48rpx;
+  margin:auto;
+}
+.classView{
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  padding-bottom:30rpx;
+}
+
+.latestOnlineBox{
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+.fruitsMendTow {
+  /* padding-left:40rpx; */
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
+  overflow-x:scroll;
+  border-bottom: 8rpx solid #efeff4;
+}
+
+.fruitsMendTowBox {
+  width: 33%;
+  /* margin-right: 60rpx; */
+  min-height: 330rpx;
+  display: inline-block;
+  background: #fff;
+  border-bottom: none;
+}
+
+.fruitsMendTowBox view {
+  text-align: center;
+} 
+
+.fruitsMendImgT {
+  width:70%;
+  height:128rpx;
+  border-radius: 50%;
+  margin-left: 26rpx;
+}
+.fruitsMendImgTs {
+  width:100%;
+  padding:20rpx;
+  height: 180rpx;
+}
+.ishotShop-title{
+  overflow: hidden;
+  white-space : pre-wrap ;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  padding: 10rpx 30rpx;
+}
+.ishotShop-price{
+  color:#FF3355;
+  /* margin-top:25rpx; */
+}
+/* 全部 start */
+
+.allShop {
+  background: #fff;
+}
+
+.allShopTitle {
+  margin-top: 20rpx;
+  color: #444;
+  font-size: 30rpx;
+  padding: 30rpx 30rpx 10rpx 30rpx;
+  text-align: center;
+}
+
+.allShopList {
+  margin: 0rpx 20rpx;
+  padding-bottom: 25rpx;
+}
+
+.allShopImg {
+  border-radius: 6rpx;
+  width: 710rpx;
+  height: 320rpx;
+  vertical-align: middle;
+}
+.allShopListBOx{
+  position: relative;
+}
+.allShopListbott{
+  font-size: 32rpx;
+  text-align: center;
+  width: 100%;
+  padding: 0 20%;
+  color:#ff8804;
+  position: absolute;
+  top: 90rpx;
+  bottom: 0;
+}
+.allShopListbottOne{
+  overflow:hidden;
+  white-space:pre-wrap;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+}
+
+.allShopListbottTow{
+  font-size: 28rpx;
+}
+/* 全部 end  */

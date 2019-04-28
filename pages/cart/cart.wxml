@@ -1,0 +1,13 @@
+<!-- 购物车shopcar  -->
+<import src="../../template/cart/index.wxml" />
+<!-- 传递的数据
+    lists: [],       //购物车数组
+    totalPrice: 0,   //总价格
+    totalNum: 0,     //总数量
+    selectedAll: 0,   //全选
+    isSelected: 0,  //是否选中
+-->
+
+<view class="container">
+     <template is="{{cart.list.length > 0 ? 'cart-goods-list' : 'no-goods'}}" data="{{...cart,network}}"></template>
+</view>

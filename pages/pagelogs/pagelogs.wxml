@@ -1,0 +1,8 @@
+<view class="morePro">
+  <image src="../../images/more.png" class="moreimg"></image>
+  <view>动态登录失败</view>
+  <view class="log">解决办法：</view>
+  <view class="log">1.联系"{{shopinfolo.sets.shop.name}}"客服</view>
+  <view class="log">2.退出"{{shopinfolo.sets.shop.name}}"小程序,后重新进入</view>
+  <view class="log">3.在小程序列表里删除"{{shopinfolo.sets.shop.name}}"小程序后,重新搜索"{{shopinfolo.sets.shop.name}}"进入</view>
+</view>

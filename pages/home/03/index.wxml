@@ -1,0 +1,70 @@
+<!-- 搜索 -->
+<view class="search">
+  <navigator url="../../search/search">
+    <view class="searchimg">
+    </view>
+    <view class="searchText">
+      <image src="../../../images/search.png" class="searchTextImg" />
+      <text class="searchTextwords">搜索商品</text>
+    </view>
+  </navigator>
+</view>
+
+<!-- 轮播图 -->
+<view class="banner">
+  <import src="../../../template/banner/index.wxml" />
+  <template is="shops" data="{{list}}"></template>
+</view>
+
+<!-- 预约 -->
+<view class="make">
+  <view class="makeTal">
+    <navigator url="../../appointment/appointment">
+      <image src="../../../images/tel.png" class="makeimage" />
+      <text class="maketext">预约您的定制服务</text>
+      <view class="makebut">去预约</view>
+    </navigator>
+  </view>
+</view>
+<!-- 推荐分类 -->
+<view class="make1">
+  <view class="makeTal1">
+    <!-- <image src="../../../images/zx.png" class="makeimage1" /> -->
+    <text class="maketext1">推荐分类</text>
+    <!-- <image src="../../../images/zxt.png" class="makeimage1" /> -->
+  </view>
+  <view class="makeTalTowBox">
+    <block wx:for="{{list.category_sub}}" wx:key="classViewList" class="makeTalTow">
+      <navigator class="makeTalTow" url="../../category-two/category-two?index={{index}}&categoryId={{item.id}}&title={{item.name}}&popular=1">
+        <image src="{{item.thumb}}" mode="aspectFill" class="makeTalTowImg"></image>
+        <view>{{item.name}}</view>
+      </navigator>
+    </block>
+  </view>
+</view>
+<!--空白  -->
+<view class="myOne"></view>
+
+<!--猜你喜欢  -->
+<view class="classname">
+  <view class="makeTals">
+    <!-- <image src="../../../images/zx.png" class="makeimage" /> -->
+    <text class="maketext">猜你喜欢</text>
+    <!-- <image src="../../../images/zxt.png" class="makeimage" /> -->
+  </view>
+
+  <!--主体  -->
+  <!-- <view class="likeBox"> -->
+  <import src="../../../template/goods-list/index.wxml" />
+  <template is="boutique1" data="{{list,redic}}"></template>
+  <!-- <view class="like" wx:for="{{list.goods}}" bindtap="product" data-goodsid="{{item.id}}">
+        <image src="{{item.thumb}}" class="likeImg"></image>
+        <view class="likeFont">{{item.title}}</view>
+        <text class="likeOne">￥{{item.marketprice}}</text>
+        <text class="likeTow">￥{{item.productprice}}</text>
+      </view> -->
+  <view class="noMore clear" hidden="{{hide}}">
+    没有更多内容了
+  </view>
+  <!-- </view> -->
+</view>

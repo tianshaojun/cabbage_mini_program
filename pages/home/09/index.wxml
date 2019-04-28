@@ -1,0 +1,57 @@
+<!-- 轮播 start -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicatorActiveColor="{{indicatorActiveColor}}">
+  <block wx:for="{{list.banner}}" wx:for-index="index" wx:key="getBanner">
+    <swiper-item class="indexBanner">
+      <image class="footerImg" src="{{item.thumb}}" mode='aspectFill' />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 轮播 end -->
+
+<!-- 预约 -->
+<view class="make">
+  <view class="makeTal">
+    <navigator url="../../appointment/appointment">
+      <image src="../../../images/tel.png" class="makeimage" />
+      <text class="maketext">预约您的定制服务</text>
+      <view class="makebut">去预约</view>
+    </navigator>
+  </view>
+</view>
+<!-- 预约 end  -->
+
+<!-- 头部 start -->
+<!-- <view class="indexTop clearfix">
+  <image class="indexBg" src="../../../images/top.jpg" mode="widthFix"></image>
+  <view class="indexHeader">
+    <view class="indexIcon">双11特卖</view>
+    <view class="indexName">这里是你的名字</view>
+    <image class="indexImg" src="../../images/pic1.jpg" mode="aspectFill"></image>
+    <view class="indexTitle">——全年最低价——</view>
+    <view class="indexTime">活动时间：2016-10-15 至 2016-11-11</view>
+    <view class="indexBtns flex space_center">
+      <navigator url="../category-all/category-all" class="classname">全部商品</navigator>
+      <navigator url="../category-all/category-all" class="classname">店铺介绍</navigator>
+    </view>
+  </view>
+</view> -->
+<!-- 头部 end -->
+
+<!-- 分類 start -->
+<view class="indexCategory">
+  <image class="indexCategory_bg" src="../../../images/bg.png"></image>
+  <view class="indexCategory_box flex flex_wrap">
+    <block wx:for="{{list.category_sub}}" wx:key="classViewList">
+      <navigator url="../../category-two/category-two?index={{index}}&title={{item.name}}&categoryId={{item.id}}&popular=1" class="flex_shrink indexCategory_item">
+        <image class="item_img" src="{{item.thumb}}" mode="aspectFill"></image>
+        <view class="item_title overflow">{{item.name}}</view>
+      </navigator>
+    </block>
+  </view>
+
+  <!-- <image class="footerImg" src="../../images/pic1.jpg" mode="widthFix"></image> -->
+</view>
+<!-- 分類 end -->
+<view class="noMore clear" hidden="{{hide}}">
+  没有更多内容了
+</view>

@@ -1,0 +1,47 @@
+<view class="search">
+  <navigator url="../search/search">
+    <view class="searchimg"></view>
+    <view class="searchText">
+      <image src="../../images/search.png" class="searchTextImg" />
+      <text class="searchTextwords">搜索商品</text>
+    </view>
+  </navigator>
+</view>
+
+<!-- 排序 start-->
+ <view class="classNavButton"> 
+  <block wx:for="{{clickNav}}" wx:key="clickNav">
+    <view class="classNavButton_button isCan">
+      <view class="classNavButton_view {{nav==index?'navActive':''}}" data-nav="{{index}}" bindtap="navChange">
+        <view bindtap="clickNav">{{item}}</view>
+        <view class="buttonGroup">
+          <block wx:if="{{index==sortIndex?'navActive':''}}">
+            <view class="{{desc?'arrowOrange':'arrowGray'}}"></view>
+            <view class="arrowRotate {{!desc?'arrowOrange':'arrowGray'}}"></view>
+          </block>
+          <block wx:else>
+            <view class="arrowGray"></view>
+            <view class="arrowRotate arrowGray"></view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </block>
+ </view> 
+<!-- 排序 end -->
+<block wx:if="{{list.goods.length>0}}">
+  <import src="../../template/goods-list/index.wxml" />
+  <view class="bout">
+    <template is="boutique" data="{{list,redic}}"></template>
+    <view style="clear:both;"> </view>
+  </view>
+  <view class="noMore clear" wx:if="{{page.next}}">
+    没有更多内容了
+  </view>
+</block>
+<block wx:else>
+  <view class="morePro">
+    <image src="../../images/more.png" class="moreimg"></image>
+    <view class="">暂无商品，请搜索其他商品看看吧！</view>
+  </view>
+</block>

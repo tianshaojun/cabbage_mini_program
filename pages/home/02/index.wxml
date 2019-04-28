@@ -1,0 +1,68 @@
+<!-- 首页 index -->
+<!-- 搜索 -->
+<view class="search">
+  <navigator url="../../search/search">
+    <view class="searchimg">
+    </view>
+    <view class="searchText">
+      <image src="../../../images/search.png" class="searchTextImg" />
+    </view>
+  </navigator>
+</view>
+<!-- 轮播图 -->
+<view class="banner">
+  <import src="../../../template/banner/index.wxml" />
+  <template is="shops" data="{{list}}"></template>
+</view>
+<!-- 预约 -->
+
+<view class="make">
+  <view class="makeTal">
+    <navigator url="../../appointment/appointment">
+      <image src="../../../images/tel.png" class="makeimage" />
+      <text class="maketext">预约您的定制服务</text>
+      <view class="makebut">去预约</view>
+    </navigator>
+  </view>
+</view>
+
+<view class="classView">
+  <view class="classViewList" wx:for="{{list.category_sub}}" wx:key="classViewList">
+    <navigator url="../../category-two/category-two?index={{index}}&categoryId={{item.id}}&title={{item.name}}&popular=1">
+      <image src="{{item.thumb}}"></image>
+      <view class="overflow">{{item.name}}</view>
+    </navigator>
+  </view>
+</view>
+<!-- 精选宝贝   -->
+<!-- <view class="jxRecommend">
+    <view class="bar">
+      <image class="titleImage" src="../../images/jx.png"></image>
+    </view>
+    <view class="recommendList">
+      <scroll-view scroll-x="true" style="white-space: nowrap; display: flex;height:330rpx; overflow-x:scroll;">
+        <block wx:for="{{list.goods}}" wx:key="id">
+          <view class="jxRecommendList" data-method="goods" bindtap="bindViewRedirect" data-goodsid="{{item.id}}">
+            <view class="jxImagecon">
+              <image class="jxImage" src="{{item.thumb}}"></image>
+            </view>
+            <view class="recommendTitle">{{item.title}}</view>
+            <view class="recommendPrice">￥{{item.marketprice}}</view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view> -->
+
+<!-- 推荐 -->
+<view class="recommend">
+  <view class="bar">
+    <!-- 推荐宝贝  -->
+    <image class="titleImage" src="../../../images/tj.png"></image>
+  </view>
+  <import src="../../../template/goods-list/index.wxml" />
+  <template is="boutique1" data="{{list,redic}}"></template>
+</view>
+<view class="noMore clear" hidden="{{hide}}">
+  没有更多内容了
+</view>

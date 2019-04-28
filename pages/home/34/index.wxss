@@ -1,0 +1,250 @@
+/*精品*/
+@import "../../../template/goods-list/index.wxss";
+@import "../../../template/banner/index.wxss";
+/*搜索  */
+page {
+  background: #1E1E1E;
+}
+.search {
+  padding: 16rpx 30rpx;
+}
+
+.searchimg {
+  width: 600rpx;
+  height: 60rpx;
+  background: #e5e5e5;
+  margin: 14rpx auto;
+  border-radius: 30rpx;
+}
+
+.searchText {
+  width: 100%;
+  background:#222;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+  justify-content: center; 
+  color: #ffffff;
+  border-radius: 30rpx;
+  border: 2rpx solid #ff8804;
+}
+
+.searchTextImg {
+  width: 30rpx;
+  height: 30rpx;
+  margin: 15rpx 20rpx 0;
+}
+/*推荐分类  */
+
+.makeTalTowBox{
+  padding:30rpx 20rpx 0 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  background: #181818;
+}
+
+.makeTalTowImg{
+  width:100%;
+  height: 210rpx;
+}
+
+.makeTalTow {
+  margin-bottom: 20rpx;
+  width: 50%;
+  padding: 0 20rpx;
+}
+
+.makeTalTow view{
+  width: 150rpx;
+  font-size: 30rpx;
+  text-align: center; 
+  overflow: hidden;
+  white-space: nowrap; 
+  text-overflow: ellipsis;   
+}
+/*首页产品  */
+.fruitsProBoxOne{
+  padding: 0 50rpx;
+}
+.fruitsProBoxImg{
+  width: 180rpx;
+  height: 180rpx;
+  margin: 10rpx 20rpx; 
+}
+.fruitsProBox{
+  background: #181818;
+  display: flex;
+  border-bottom:2rpx solid #363636;
+  padding-bottom:6rpx;
+}
+.fruitsProBotTop{
+  color: #fff;
+  width: 410rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 30rpx;
+  margin:20rpx 0 50rpx 0;
+}
+.fruitsProBoxText{
+  font-size: 26rpx;
+  margin-right: 14rpx;
+  color: #dddddd;
+  letter-spacing:4rpx;
+}    
+.fruitsProBoxTextOne{
+  color: #a8a8a8; 
+  font-size: 26rpx;
+  letter-spacing:8rpx;
+}
+/* 轮播图 */
+.banner {
+  width: 100%;
+  height:360rpx;
+}
+
+/* 预约 start */
+.make {
+  margin: 30rpx 0;
+  height: 88rpx;
+  padding: 0 50rpx;
+  box-sizing: border-box;
+}
+.makeTal {
+  width: 100%;
+  height: 88rpx;
+  position: relative;
+   background: #181818;
+}
+
+.makeimage {
+  width: 28rpx;
+  height: 26rpx;
+  margin: 30rpx 16rpx 0 26rpx;
+}
+
+.maketext {
+  line-height: 88rpx;
+  color: #666;
+  margin-left: 30rpx;
+}
+
+.makebut {
+  position: absolute;
+  width: 120rpx;
+  height: 47rpx;
+  top: 16rpx;
+  right: 30rpx;
+  color: #fff;
+  border: 1rpx solid #ff8804;
+  text-align: center;
+  line-height: 45rpx;
+  border-radius: 5rpx;
+  font-size: 24rpx;
+  background:#FF8C00;
+}
+
+/* 预约 end  */
+.recommend {
+  width:650rpx;
+  margin: 0 auto;
+  background:#181818;
+  margin-bottom: 30rpx;
+}
+.recommend {
+  margin-top: 30rpx;
+}
+.recommend view {
+  display: block;
+  text-align: center;
+  line-height: 60rpx;
+}
+.recommendOne{
+  color: 	#FFD700;
+  font-size: 32rpx;
+}
+.recommendTow{
+  color: #dddddd;
+  font-size: 28rpx;
+}
+.headline{
+  border-bottom: 2rpx solid #efeff4;
+}
+/* 首页公共 */
+page,view,text,image{
+  box-sizing: border-box;
+} 
+.bar {
+  width: 100%;
+  height:48rpx;
+  position:relative;
+  background: #fff;
+}
+.barView{
+  width:150rpx;
+  height:100%;
+  color:#fff;
+  background: #fb5660;
+  font-size:28rpx;
+  text-align: center;
+  line-height:48rpx;
+  margin:auto;
+}
+.classView{
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  padding-bottom:30rpx;
+}
+
+.latestOnlineBox{
+   margin-left:6%;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.fruitsMendTow {
+  display: flex;
+  justify-content: space-around;
+  overflow-x:scroll;
+}
+
+.fruitsMendTowBox {
+  margin-right:6%;
+  width:41%;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  border: 1px solid #eee;
+  background: #fff;
+}
+.ishotShop{
+  position: absolute;
+  top: 82rpx;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(76, 76, 76, 0.8)
+}
+.fruitsMendTowBox view {
+   padding-left: 20rpx; 
+}
+
+.fruitsMendImgT {
+  width: 288rpx;
+  height: 190rpx;
+}
+.ishotShop-title{
+  overflow: hidden;
+   white-space : pre-wrap ;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  width:240rpx;
+  padding: 0 0 0 20rpx;
+}
+.ishotShop-price{
+  color:#fe860f;
+  margin-top:25rpx;
+}

@@ -1,0 +1,33 @@
+<view class="search">
+  <view class="searchView">
+    <image src="../../images/search.png" class="searchicon" bindtap="search"></image>
+    <block wx:if="{{goodsname!==''}}">
+      <image src="../../images/clone.png" class="clone" bindtap="clone"></image>
+    </block>
+    <input type="text"  auto-focus="true" name="inputSearch" bindchange="bindChange" value="{{goodsname}}" bindinput="bindKeyInput" placeholder="搜索您需要的商品" class="int" />
+  </view>
+  <block wx:if="{{goodsname===''}}">
+    <view class="cancel" bindtap="cancel">取消</view>
+  </block>
+  <block wx:else>
+    <view class="cancel sec" bindtap="searchBt">搜索</view>
+  </block>
+</view>
+
+
+<block wx:if="{{list.goods.length>0}}">
+  <import src="../../template/goods-list/index.wxml" />
+  <view class="bout">
+    <template is="boutique" data="{{list,redic}}"></template>
+    <view style="clear:both;"> </view>
+  </view>
+  <view class="noMore clear" wx:if="{{page.next==false}}">
+    没有更多内容了
+  </view>   
+</block>
+<block wx:else>
+  <view class="morePro">
+    <image src="../../images/more.png" class="moreimg"></image>
+    <view class="">暂无商品，请搜索其他商品看看吧！</view>
+  </view>
+</block>

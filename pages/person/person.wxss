@@ -1,0 +1,132 @@
+page{
+  background: #f7f7f7;
+}
+.userIndexTitle {
+  width: 100%;
+  height: 254rpx;
+  text-align: center;
+  background: #f4f8fb;
+  padding-top: 54rpx;
+  color: #fb5660;
+}
+
+/*dingdan  */
+
+.mineBox {
+  width: 750rpx;
+  margin: auto;
+}
+
+.userIndexImg {
+  width: 125rpx;
+  height: 125rpx;
+  border-radius: 50%;
+  margin-bottom:10rpx;
+}
+
+.mineIndent {
+  /* height: 36rpx;
+  line-height: 36rpx; */
+  padding: 26rpx 24rpx;
+  display: flex;
+  background: white;
+  font-size: 28rpx;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #f4f8fb;
+}
+
+.mineIndentRightImg {
+  width: 14rpx;
+  height: 24rpx;
+  margin-left: 10rpx;
+  vertical-align: middle;
+  margin-top: -2rpx;
+}
+
+.mineIndentLeft {
+  color: #343434;
+}
+
+.mineIndentRight {
+  color: #9a9a9a;
+}
+
+/*payment  */
+
+.minePayment {
+  height: 146rpx;
+  background: #fff;
+  display: flex;
+}
+
+.minePaymentBoxImg {
+  width: 53rpx;
+  height: 53rpx;
+  margin-top: 32rpx;
+}
+
+.mineNavBoxTe {
+  width: 80%;
+  height: 122rpx;
+}
+
+.minePaymentBox {
+  width: 187rpx;
+  height: 146rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.viewList {
+  background: #fff;
+   padding-bottom: 50rpx; 
+  margin-top: 20rpx;
+  position: relative;
+}
+
+.persItem {
+  padding: 50rpx 30rpx 0  30rpx;
+  position: relative;
+}
+
+.symbols {
+  width: 57rpx;
+  height: 57rpx;
+}
+
+.presText {
+  position: absolute;
+  line-height: 57rpx;
+  left: 110rpx;
+}
+
+.check {
+  width: 19rpx;
+  height: 30rpx;
+  position: absolute;
+  line-height: 57rpx;
+  right: 30rpx;
+  top:63rpx;
+}
+/* 固定按钮 start */
+.fixedBox{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 80rpx;
+  background: rgba(0,0,0,.5);
+  text-align: center;
+}
+.goCart{
+  width: 40rpx;
+  height: 80rpx;
+  display: block;
+  margin: 0 auto;
+  padding: 20rpx 0;
+}
+.fixedBox contact-button{
+  padding: 20rpx 0;
+  /* border-bottom: 1rpx solid #fff; */
+  width: 100%;
+}

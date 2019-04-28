@@ -1,0 +1,137 @@
+<view class="container">
+  <!--轮播图  -->
+  <view class="swiper-container" wx:if="{{info.thumb_url!=''}}">
+    <swiper class="swiper_box" indicator-dots="true" indicator-active-color="#ff3355" autoplay="auto" circular="true" interval="5000" duration="1000">
+      <block wx:for="{{info.thumb_url}}" wx:key="itu">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="150" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- <view class="dots">
+      <block wx:for="{{info.thumb_url}}" wx:key="unique">
+        <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+      </block>
+    </view> -->
+  </view>
+  <view class="swiper-container" wx:else>
+    <image src="{{info.thumb}}" class="slide-image swiper-image" width="100%" height="100%" />
+  </view>
+  <!--商品介绍  -->
+  <!-- <view class="goods-info">
+        <view class="goods-title">{{info.title}}</view>
+        <view class="goods-price">¥
+         {{info.price}}
+        ({{info.total==0?'已售罄':'库存 '}}
+        {{info.total}}）
+         {{info.issendfree=='1'?'包邮':''}}
+        </view>
+   </view> -->
+  <view class="describe">
+    <view class="s-item">{{info.title}}</view>
+    <view>
+      <text class="priceNow">￥{{info.price}}</text>
+    </view>
+    <view class="promotion_bot">
+      <view class="promotion_bot_tow">库存:{{info.total}}</view>
+    </view>
+  </view>
+  <view class="particulars">
+    <block wx:for="{{details}}" wx:key="*this" wx:for-index="ind">
+      <view class="titleChange {{tab==ind?'active':''}}" data-ind="{{ind}}" bindtap="tab">
+        {{item}}
+        <text class="titleChange_line"></text>
+      </view>
+    </block>
+  </view>
+  <!--teb切换  -->
+  <!--详情teb菜单-->
+  <view class="promotion_teb">
+    <!--商品详情  -->
+    <view class="nodes {{tab==0?'show':'hidden'}}">
+      <block wx:if="{{nodes!=''}}">
+        <rich-text nodes="{{info.content}}" bindtap="tap"></rich-text>
+      </block>
+
+    </view>
+    <!--产品参数  -->
+    <view class="{{tab==1?'show':'hidden'}}">
+      <block wx:if="{{list.getParam!=''}}">
+        <block wx:for="{{list.getParam}}" wx:key="params">
+          <view class="promotion_teb_one_text flex">
+            <view class="promotion_teb_text flex_shrink">{{item.title}}</view>
+            <view class="overflow">{{item.value}}</view>
+          </view>
+        </block>
+      </block>
+      <block wx:else>
+        <view class="nodes_noMore">暂无数据</view>
+      </block>
+    </view>
+  </view>
+  <!--用户评论 end -->
+  <!-- 同店推荐 start -->
+  <view class="tdtj  {{tab==2?'show':'hidden'}}">
+    <import src="../../template/goods-list/index.wxml" />
+    <template is="boutique" data="{{list,redic}}"></template>
+    <view class="tuijia"></view>
+  </view>
+  <!-- 同店推荐 end -->
+  <view class="footer-box">
+    <view class="fbicon" bindtap="collect" data-favo="0" wx:if="{{favorite == 0}}">
+      <image mode="aspectFill" src="../../images/favorite0.png"></image>
+    </view>
+    <view class="fbicon" bindtap="delcollect" data-favo="1" wx:else>
+      <image mode="aspectFill" src="../../images/favorite1.png"></image>
+    </view>
+    <view class="contact">
+      <contact-button style="opacity:0;position:absolute;" type="default-dark" session-from="weapp" size="27"></contact-button>
+      客服
+    </view>
+    <view class="join-shop-cart" bindtap="bindViewTab" data-method="showSpecs" data-ordertype="cart">加入购物车</view>
+    <view class="now-buy" bindtap="bindViewTab" data-method="showSpecs" data-ordertype="buyNow">立即购买</view>
+  </view>
+  <view class="show-popup" hidden="{{hide}}">
+    <view class="popup-mask" bindtap="bindViewTab" data-method="closePopup"></view>
+    <view class="popup-contents">
+      <view class="pop-goods-info">
+        <view class="pop-img-box">
+          <image src="{{specThumb}}" class="goods-thumbnail" />
+        </view>
+        <view class="pop-goods-des">
+          <view class="pop-goods-title">{{info.title}}</view>
+          <view class="pop-goods-price">¥ {{info.options[index].id==0?info.price:info.options[index].marketprice}} ({{info.options[index].id==0&&info.total==0||info.options[index].id!=0&&inf.options[index].stock==0?'已售罄':'库存 '}} {{info.options[index].id==0?info.total:info.options[index].stock}}）
+            {{info.issendfree=='1'?'包邮':''}}
+          </view>
+        </view>
+        <view class="pop-goods-close" bindtap="bindViewTab" data-method="closePopup"></view>
+      </view>
+      <view class="size-label-box">
+        <block wx:for="{{info.specs}}" wx:for-item="property" wx:for-index="idx" wx:key="spec">
+          <view class="label">{{property.title}}</view>
+          <view class="label-item-box">
+            <view class="label-item {{selected[idx]==index ? 'active' : '' }}" wx:for="{{property.items}}" wx:key="id" data-propertyindex="{{idx}}" data-propertychildindex="{{index}}" wx:key="sil" bindtap="bindViewTab" data-method="selectedSpecs">
+              {{item.title}}
+            </view>
+          </view>
+        </block>
+      </view>
+      <view class="buy-num-box">
+        <view class="num-label">购买数量</view>
+        <view class="num-box">
+          <view class="num-jian {{num == 1 ? 'hui': ''}}" bindtap="bindViewTab" data-method="changeNum" data-num="-1">-</view>
+          <view class="num-input">
+            <input type="number" value="{{num}}" disabled/>
+          </view>
+          <view class="num-jia {{num ? 'hui': ''}}" bindtap="bindViewTab" data-method="changeNum" data-num="1">+</view>
+        </view>
+      </view>
+      <view class="popup-join-btn" wx:if="{{orderType =='cart'}}" bindtap="bindViewTab" data-method="addToCart">
+        加入购物车
+      </view>
+      <view class="popup-join-btn" wx:if="{{orderType =='buyNow'}}" bindtap="bindViewTab" data-method="buynow">
+        立即购买
+      </view>
+    </view>
+  </view>
+</view>

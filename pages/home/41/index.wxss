@@ -1,0 +1,275 @@
+@import "../../../template/banner/index.wxss";
+.content {
+  padding: 0 20rpx;
+}
+.search {
+  padding: 16rpx 30rpx;
+  background: #37373b;
+}
+.searchimg {
+  width: 600rpx;
+  height:60rpx;
+  background: #e5e5e5;
+  margin:14rpx auto;
+  border-radius: 30rpx;
+}
+.searchText {
+  width: 100%;
+  background: #fff;
+  border-radius: 6rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+  justify-content: center;
+  color: #999;
+}
+.searchTextImg{
+  width:30rpx;
+  height:30rpx;
+  margin:15rpx 20rpx 0;  
+}
+/*拼团*/
+.pintuan{
+  width: 750rpx;
+  height: 160rpx;
+  background: #FFF;
+  margin-bottom: 20rpx;
+}
+.pleft{
+  width: 374rpx;
+  height: 160rpx;
+  border-right: 2rpx solid #f0f0f0;
+  float: left;
+}
+.pright{
+  width: 373rpx;
+  height: 160rpx;
+  float: right;
+}
+.ptxtdiv{
+  width: 180rpx;
+  height: 100rpx;
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+  float: left;
+}
+.ptitle{
+  width: 180rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #e16664;
+  font-size: 30rpx;
+}
+.pdescribe{
+  width: 180rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #acacac;
+  font-size: 24rpx;
+}
+.pimage{
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  float: left;
+}
+.pimage image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.pcolor{
+  color: #fece65;
+}
+/*拼团end*/
+/*多行单列图片文字底部title重合布局 黄色皮肤 start */
+view,text{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+/*start banner*/
+
+.swiper {
+  height:410rpx;
+  /* margin-top: 88rpx; */
+  /* border:1px solid #e16664; */
+}
+
+.swiper image {
+  width: 100%;
+  height:410rpx;
+}
+
+scroll-view {
+  padding-right: 30rpx;
+  border-bottom: 1rpx solid #f4f4f4;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  height:275rpx;
+}
+
+/*start menu*/
+
+.index-menu {
+  display: box;
+  display: -webkit-box;
+  color: #343434;
+  font-size: 24rpx;
+  padding: 30rpx;
+  height:300rpx;
+}
+
+.menu-item {
+  text-align: center;
+  width: 320rpx;
+  position: relative;
+  padding-right:30rpx;
+}
+
+.menu-item image {
+  width: 100%;
+  height: 210rpx;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10rpx;
+}
+
+.classTitle {
+  background: rgba(52, 52, 52, 0.4);
+  height: 210rpx;
+  width: 320rpx;
+  line-height: 210rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 28rpx;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+.titleLine {
+  width: 72rpx;
+  height: 2rpx;
+  display: block;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -36rpx;
+  margin-top: 20rpx;
+}
+
+/*end menu*/
+
+/* 产品列表 start*/
+
+.content-list {
+  position: relative;
+  height: 352rpx;
+  border: 1rpx solid #f4f4f4;
+  border-radius: 10rpx;
+  overflow: hidden;
+  margin-top: 20rpx;
+}
+
+.productList-title {
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background: rgba(52, 52, 52, 0.8);
+  width: 100%;
+  height: 68rpx;
+  line-height: 68rpx;
+  padding: 0 20rpx;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+}
+
+.productImage {
+  width: 100%;
+}
+
+.collectionBg {
+  position: absolute;
+  left: 20rpx;
+  top: 20rpx;
+  z-index: 100;
+  background: rgba(52, 52, 52, 0.6);
+  width: 54rpx;
+  height: 54rpx;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.collectionBg image {
+  width: 32rpx;
+  height: 28rpx;
+}
+
+.productPrice {
+  position: absolute;
+  right: 0;
+  top: 20rpx;
+  background: #fff;
+  height: 54rpx;
+  line-height: 50rpx;
+  border: 1rpx solid #f4f4f4;
+  border-top-left-radius: 27rpx;
+  border-bottom-left-radius: 27rpx;
+  padding: 0 20rpx 0 40rpx;
+  color: #ffbb29;
+  font-size: 24rpx;
+}
+
+
+.make {
+  width: 100%;
+  height:88rpx;
+  background: #fff;
+}
+
+.makeTal {
+  width: 100%;
+  height: 88rpx;
+  position: relative;
+  border-bottom:1px solid #999;
+}
+
+.makeimage {
+  width: 28rpx;
+  height: 26rpx;
+  margin: 30rpx 16rpx 0 26rpx;
+}
+
+.maketext {
+  line-height: 88rpx;
+  color: #fe860f;
+}
+
+.makebut {
+  position: absolute;
+  width: 88rpx;
+  height: 36rpx;
+  top: 26rpx;
+  right: 30rpx;
+  color: #ff8804;
+  border: 1rpx solid #ff8804;
+  text-align: center;
+  line-height: 36rpx;
+  border-radius: 5rpx;
+  font-size: 24rpx;
+}
+
+.no-more-goods{
+  text-align: center;
+  font-size: 26rpx;
+  padding-bottom:48rpx; 
+  color: #999;
+}

@@ -1,0 +1,73 @@
+<view class="box">
+  <block wx:if="{{address=='' || address==null}}">
+    <view class="acceptInfo" bindtap="bindViewTab" data-method="address" data-jumlen="0">
+      <image class="acceptImg" src="../../images/dingWi.png"></image>
+      <view class="noAddress">您还没有默认收货地址，马上<text class="add">添加</text></view>
+      <image class="bottomImg" src="../../images/orderBg.png"></image>
+      <image class="acceptRight" src="../../images/check.png"></image>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="getdefaultaddress" bindtap="bindViewTab" data-method="address" data-jumlen="1">
+      <image class="acceptImg" src="../../images/dingWi.png"></image>
+      <view class="noAddress">
+        <view>{{address.realname}}({{address.mobile}})</view>
+        <view class="noAddressView">{{address.province}}{{address.city}}{{address.area}}{{address.address}}</view>
+      </view>
+      <image class="bottomImg" src="../../images/orderBg.png"></image>
+      <image class="acceptRight" src="../../images/check.png"></image>
+    </view>
+  </block>
+  <view class="goodDistribution">
+    <view class="goodLists" wx:for="{{goodsList}}" wx:key="{{index}}">
+      <!-- <navigator url="../details/details?goodsid={{item.id}}" redirect> -->
+      <view class="goodLeft">
+        <image class="goodLeftImg" mode="aspectFill" src="{{item.thumb}}"></image>
+      </view>
+      <view class="goodRight">
+        <view class="goodTxt">{{item.title}}</view>
+        <view class="goodTxt">{{item.option_title!='' && item.option_title !=undefined?"规格:"+item.option_title:''}}</view>
+        <view class="price">￥{{item.optionid==0?item.price:item.option_price}}</view>
+        <view class="number">X {{item.total}}</view>
+      </view>
+      <!-- </navigator> -->
+    </view>
+  </view>
+  <!--文本输入-->
+  <view class="textArea">
+    <textarea class="note" maxlength="200" bindfocus="bindFocus" bindinput="bindKeyInput" placeholder="请输入备注"></textarea>
+    <text class="textNum">{{leg}}/200</text>
+  </view>
+  <view class="AllMony">
+    <view class="descr">
+      <text class="goodAllDescr">商品总额:</text>
+      <text class="goodAllMony">￥{{allGoodsPrice=="NaN"?'0.00':allGoodsPrice}}</text>
+    </view>
+    <!-- <view class="descr" wx:if="{{isNeedLogistics > 0}}">
+      <text class="goodAllDescr">配送方式:</text>
+      <text class="goodAllMony">{{yunPrice > 0?'默认':'包邮'}}</text>
+    </view> -->
+
+
+    <view class="descr" wx:if="{{isNeedLogistics > 0}}">
+      <view class="goodAllDescr">配送方式</view>
+      <view class="goodAllMony" wx:if="{{yunPrice > 0}}">快递{{yunPrice}}</view>
+      <view class="goodAllMony" wx:if="{{yunPrice == 0}}">包邮</view>
+    </view>
+    <view class="descr"  wx:if="{{isNeedLogistics > 0 && yunPrice > 0}}">
+      <text class="goodAllDescr">运费</text>
+      <text class="goodAllMony">+ ¥ {{yunPrice}}</text>
+    </view>
+  </view>
+  <!--底部-->
+  <view class="bottom">
+    <view class="allGoods">共<text class="num">{{totalNum}}</text>件商品</view>
+    <block wx:if="{{ord==true}}">
+    <view class="submitOrder" bindtap="bindViewTab" data-method="confirm">提交订单</view>
+    </block>
+    <block wx:else>
+       <view class="submitOrder" >提交中...</view>
+    </block>
+    <view class="give">总计:<text class="mony">￥{{allGoodsAndYunPrice=="NaN"?'0.01':allGoodsAndYunPrice}}</text></view>
+  </view>
+</view>

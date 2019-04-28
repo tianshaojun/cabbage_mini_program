@@ -1,0 +1,77 @@
+<view class="search">
+  <navigator url="../../search/search">
+    <view class="searchText">
+      <image src="../../../images/search.png" class="searchTextImg" />
+      <text>搜索商品</text>
+    </view>
+  </navigator>
+</view>
+<!-- 搜索 start -->
+<block wx:if="{{opid!='' && opid!=undefined}}">
+  <!-- 轮播图 start-->
+  <view class="banner">
+    <import src="../../../template/banner/index.wxml" />
+    <template is="shops" data="{{list}}"></template>
+  </view>
+  <!-- 轮播图 end-->
+
+  <!-- 预约 start -->
+  <view class="make">
+    <view class="makeTal">
+      <navigator url="../../appointment/appointment">
+        <image src="../../../images/tel.png" class="makeimage" />
+        <text class="maketext">预约您的定制服务</text>
+        <view class="makebut">去预约</view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 预约 end -->
+
+  <view class="type-container">全部商品</view>
+
+  <!-- 产品列表 start -->
+  <block wx:if="{{list.goods.length>0}}">
+     <!-- <import src="../../../template/goods-list/index.wxml" /> 
+     <template is="boutique1" data="{{list,redic}}"></template>  -->
+     <view class="listar clearfix">
+      <block wx:if="{{redic==1}}">
+        <block wx:for="{{list.goods}}" wx:key="image">
+            <navigator class="list-view" url="../../goods-detail/goods-detail?id={{item.id}}&goodsid={{item.id}}">
+              <image class="list-image" src="{{item.thumb}}" mode="aspectFill"></image>
+              <view class="s-item overflow">{{item.title}}</view>
+              <view class="price">￥{{item.marketprice}}<text>销量：{{item.sales}}</text></view>
+            </navigator>
+        </block>
+        </block>
+        <block wx:else> 
+          <block wx:for="{{list.goods}}" wx:key="image">
+            <navigator class="list-view" url="../../goods-detail/goods-detail?id={{item.id}}&goodsid={{item.id}}" redirect>
+              <image class="list-image" src="{{item.thumb}}" mode="aspectFill"></image>
+              <view class="s-item overflow">{{item.title}}</view>
+              <view class="price">￥{{item.marketprice}}</view>
+            </navigator>
+        </block>
+      </block>
+    </view>
+  </block>
+  <!-- 产品列表 end -->
+  <block wx:else>
+    <view class="morePro1">
+      <image src="../../../images/more.png" class="moreimg"></image>
+      <!-- <view class="">暂无商品，请搜索其他商品看看吧！</view> -->
+    </view>
+  </block>
+</block>
+<block wx:else>
+  <block wx:if="{{num==0}}">
+    <loading hidden="{{loadingHidden}}">
+      加载中请稍后...
+    </loading>
+  </block>
+  <block wx:else>
+    无法获取到openid
+  </block>
+</block>
+ <view class="noMore clear" hidden="{{hide}}">
+  没有更多内容了
+</view> 

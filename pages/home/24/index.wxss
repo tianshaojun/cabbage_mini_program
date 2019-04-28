@@ -1,0 +1,263 @@
+/*精品*/
+@import "../../../template/goods-list/index.wxss";
+@import "../../../template/banner/index.wxss";
+/*搜索  */
+page {
+  background: rgb(238, 238, 238);
+}
+.search {
+  padding: 16rpx 30rpx;
+  background: #efeff4;
+}
+
+.searchimg {
+  width: 600rpx;
+  height: 60rpx;
+  background: #e5e5e5;
+  margin: 14rpx auto;
+  border-radius: 30rpx;
+}
+
+.searchText {
+  width: 100%;
+  background: #fff;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+  justify-content: center; 
+  color: #888888;
+  border-radius: 8rpx;
+}
+
+.searchTextImg {
+  width: 30rpx;
+  height: 30rpx;
+  margin: 15rpx 20rpx 0;
+}
+/*推荐分类  */
+.fruitsMendImg{
+  width: 50%;
+  height: 200rpx;
+  padding:10rpx;
+  box-sizing:border-box;
+}
+.latestOnlineBox {
+  width:100%;
+
+  box-sizing: border-box;
+} 
+.fruitsMendPosit{
+  position: relative;
+  width: 100%;
+  height: 250rpx;
+  background:#ffffff;
+}
+.fruitsMendPosit .fruitsMendTows {
+  position: absolute;
+  top:-46rpx;
+  left:5%;
+  border-radius:14rpx;
+  display:flex;
+  justify-content: space-around;
+  padding:6rpx 6rpx 6rpx 8rpx; 
+  border-bottom:2rpx solid #dddddd;
+  background: #ffffff;
+}
+.fruitsMendTowsBox{
+  width:24%;
+  display: inline-block;
+  margin-right:8rpx;
+  padding-bottom: 10rpx;
+  padding-top: 10rpx;
+}
+.fruitsMendTowsBox view{
+  text-align: center;
+  line-height: 26rpx;
+  /* margin-top: 40rpx; */
+}
+.fruitsMendImgT{
+  width:100%;
+  height:176rpx;
+  box-sizing:border-box;
+  margin-bottom: 30rpx;
+  border-radius: 50%;
+}
+/*首页产品  */
+.fruitsProBoxOne{
+  padding: 0 10%;
+  background: #ffffff;
+}
+.fruitsProBoxImg{
+  width: 180rpx;
+  height: 180rpx;
+  margin: 20rpx 20rpx; 
+  border-radius: 50%;
+}
+.fruitsProBox{
+  background: #ffffff;
+  display: flex;
+  border-bottom:2rpx solid #dddddd;
+  padding-bottom:6rpx;
+}
+.fruitsProBotTop{
+  width: 320rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 30rpx;
+  margin:10rpx 0 50rpx 0;
+}
+.fruitsProBoxText{
+  font-size: 26rpx;
+  margin-right: 14rpx;
+  color: #333333;
+  letter-spacing:4rpx;
+}    
+.fruitsProBoxTextOne{
+  color: #a8a8a8; 
+  font-size: 26rpx;
+  letter-spacing:8rpx;
+}
+/* 轮播图 */
+.banner {
+  width: 100%;
+  height:360rpx;
+}
+
+/* 预约 start */
+.make {
+  width: 100%;
+  height: 88rpx;
+  background: #fff;
+  margin: 8rpx 0;
+}
+
+.makeTal {
+  width: 100%;
+  height: 88rpx;
+  position: relative;
+  /* border-bottom: 1px solid #999; */
+}
+
+.makeimage {
+  width: 28rpx;
+  height: 26rpx;
+  margin: 30rpx 16rpx 0 26rpx;
+}
+
+.maketext {
+  line-height: 88rpx;
+  color: #666;
+  margin-left: 30rpx;
+}
+
+.makebut {
+  position: absolute;
+  width: 120rpx;
+  height: 47rpx;
+  top: 26rpx;
+  right: 30rpx;
+  color: #fff;
+  border: 1rpx solid #ff8804;
+  text-align: center;
+  line-height: 45rpx;
+  border-radius: 5rpx;
+  font-size: 24rpx;
+  background: #ff615a;
+}
+
+/* 预约 end  */
+.recommend {
+  height: 80rpx;
+  background: #fff;
+  font-size: 32rpx;
+  color: #222;
+}
+
+.recommend text {
+  display: block;
+  width: 150rpx;
+  margin-left: 20rpx;
+  text-align: center;
+  color: #333;
+  line-height: 80rpx;
+  font-size: 32rpx;
+}
+.headline{
+  border-bottom: 2rpx solid #efeff4;
+}
+/* 首页公共 */
+page,view,text,image{
+  box-sizing: border-box;
+} 
+.bar {
+  width: 100%;
+  height:48rpx;
+  position:relative;
+  background: #fff;
+}
+.barView{
+  width:150rpx;
+  height:100%;
+  color:#fff;
+  background: #fb5660;
+  font-size:28rpx;
+  text-align: center;
+  line-height:48rpx;
+  margin:auto;
+}
+.classView{
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  padding-bottom:30rpx;
+}
+
+.latestOnlineBox{
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 10rpx solid #efeff4;
+}
+.fruitsMendTow {
+  padding: 0 0 10rpx 36rpx;
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
+  overflow-x:scroll;
+}
+
+.fruitsMendTowBox {
+  width:50%;
+  min-height: 330rpx;
+  display: inline-block;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  padding:50rpx 16rpx 40rpx 16rpx;
+}
+
+.fruitsMendTowBox view {
+  text-align: center;
+}
+
+.fruitsMendImgTss {
+  width: 220rpx;
+  height:220rpx;
+  margin:0 18%;
+}
+.ishotShop-title{
+  overflow: hidden;
+  white-space : pre-wrap ;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+ 
+  margin-top:38rpx;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
+.ishotShop-price{
+  color:#FF3355;
+  margin-top:25rpx;
+}

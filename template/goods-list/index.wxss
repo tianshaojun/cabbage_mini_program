@@ -1,0 +1,42 @@
+/*精品推荐  */
+.bout {
+  width: 100%;
+   background: #fff; 
+   margin-top:20rpx;
+   padding-top: 20rpx;
+}
+.listar {
+  width: 100%;
+   padding-left: 30rpx; 
+  background: #fff; 
+}
+.listar .list-view {
+  float:left;
+  width: 330rpx;
+  height: 514rpx;
+  background: #fff; 
+  margin: 0 30rpx 30rpx 0;
+  position: relative;
+  border: 1rpx solid #e7e7e7;
+}
+.list-image {
+  width: 100%;
+  height: 350rpx;
+  overflow: hidden;
+}
+.s-item {
+  padding: 0 20rpx;
+  margin: 10rpx auto 0 auto;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.5;
+}
+.price {
+  position: absolute;
+  bottom: 12rpx;
+  left: 20rpx;
+  font-size:32rpx;
+  color: #ff3355;
+}

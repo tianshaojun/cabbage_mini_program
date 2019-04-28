@@ -1,0 +1,75 @@
+<!--手机商铺 index.wxml-->
+<view class="container">
+  <!-- 轮播图 start -->
+  <swiper class="swiper" indicator-dots="true" indicator-color="#666" indicator-active-color="#000" autoplay="auto" circular="true" interval="5000" duration="1000">
+    <block wx:for="{{list.banner}}" wx:for-index="index" wx:key="getBanner">
+      <swiper-item>
+        <image src="{{item.thumb}}" class="slideImage" mode="aspectFill" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 轮播图 end  -->
+  <!-- 预约 -->
+  <view class="make">
+    <view class="makeTal">
+      <navigator url="../../appointment/appointment">
+        <image src="../../../images/tel.png" class="makeimage" />
+        <text class="maketext">预约您的定制服务</text>
+        <view class="makebut">去预约</view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 预约 end  -->
+
+  <!-- 标题 start -->
+  <view class='shopTitle'>
+    <text class='shopTitles'>分类</text>
+  </view>
+  <!-- 标题 end  -->
+
+  <!-- 精选 start -->
+  <view class="recommendList">
+    <scroll-view scroll-x="true" style="white-space: nowrap; display: flex;height:310rpx; overflow-x:scroll;">
+      <block wx:for="{{list.category_sub}}" wx:key="id">
+        <view class="jxRecommendList">
+          <navigator url="../../category-two/category-two?index={{index}}&categoryId={{item.id}}&title={{item.name}}&popular=1">
+            <view class="recommendTitle overflow">{{item.name}}</view>
+            <!-- <view class="recommendPrice">￥0.01</view> -->
+            <view class="jxImagecon">
+              <image class="jxImage" src="{{item.thumb}}" mode="aspectFill"></image>
+            </view>
+          </navigator>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <!-- 精选 end  -->
+  <!-- 热卖 start -->
+  <!-- 标题 start -->
+  <view class='shopTitle'>
+    <text class='shopTitles'>热卖</text>
+  </view>
+  <!-- 标题 end  -->
+  <block wx:for="{{list.goods}}" wx:key="id">
+    <view class='twoShopList'>
+      <view class='shopList'>
+        <image class='twoShopImg' src='{{item.thumb}}' mode="aspectFill"></image>
+        <view class='shopListTitleBg'>
+          <view class='bgTitle overflow'>{{item.title}}</view>
+          <text class='shopPrice flLeft'>￥{{item.marketprice}}</text>
+          <text class='shopNum flRight'>销量：{{item.sales}}</text>
+        </view>
+        <view class='clear'></view>
+        <navigator url="../../goods-detail/goods-detail?goodsid={{item.id}}&id={{item.id}}">
+          <view class='buyNow'>查看详情</view>
+        </navigator>
+      </view>
+    </view>
+  </block>
+  <!-- 清除浮动 -->
+  <view class='clear'></view>
+  <!-- 热卖 end -->
+  <view class="noMore clear" hidden="{{hide}}">
+    没有更多内容了
+  </view>
+</view>

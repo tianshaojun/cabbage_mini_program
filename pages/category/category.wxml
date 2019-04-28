@@ -1,0 +1,39 @@
+<!--分类页面-->
+<view class="search">
+  <navigator url="../search/search">
+    <view class="searchimg">
+
+    </view>
+    <view class="searchText">
+      <image src="../../images/search.png" class="searchTextImg" />
+      <text class="searchTextwords">搜索商品</text>
+    </view>
+  </navigator>
+</view>
+<view class="wrap">
+  <view class="classLeft">
+    <block wx:for="{{list.category}}" wx:key="id">
+      <view class="classLeft_list {{clickActive==index ? 'active' : ''}}" data-index="{{index}}" data-id="{{item.id}}" bindtap="bindViewTab">
+        {{item.name}}</view>
+    </block>
+  </view>
+  <view class="classRight">
+    <view class="classRight_item clearfix">
+     <block wx:if="{{list.category_sub.length==0}}">
+        <image src="../../images/more.png" class="moreimg"></image>
+        <view class="ncatr">暂无商品！</view>
+     </block>
+     <block  wx:else>
+      <view class="item_list">
+        <block wx:for="{{list.category_sub}}" wx:key="id">
+          <navigator url="../goods-list/goods-list?categoryId={{item.id}}&title={{item.name}}">
+            <image class="itemImage" src="{{item.thumb}}" mode="aspectFill"></image>
+            <view class="itemTitle">{{item.name}}</view>
+          </navigator>
+        </block>
+      </view>
+     </block>
+     
+    </view>
+  </view>
+</view>

@@ -1,0 +1,94 @@
+<!-- 搜索 start -->
+<block wx:if="{{opid!='' && opid!=undefined}}">
+  <navigator url="../../search/search">
+    <view class="searchTop" bindtap="clickSearch">
+      <image class="searchImg" src="../../../images/search.png"></image>
+      <view class="searchInput">请输入搜索内容</view>
+    </view>
+  </navigator>
+  <!-- 搜索 end -->
+
+  <!-- 推荐 start -->
+  <!-- <view class="recommend">
+    <image class="recommend_img" src="../../images/remmend.png"></image>
+    <image class="recommend_icon" mode="widthFix" src="../../images/remmend_icon.png"></image>
+    <view class="recommend_name overflow">人类简史 从动物到上帝</view>
+    <view class="recommend_title overflowTwo">从十万年前有生命迹象到21世纪资本的人类发展史</view>
+  </view> -->
+  <!-- 推荐 end -->
+
+  <!-- 轮播图 start-->
+  <view class="banner">
+    <import src="../../../template/banner/index.wxml" />
+    <template is="shops" data="{{list}}"></template>
+  </view>
+  <!-- 轮播图 end-->
+
+  <!-- 预约 start -->
+  <view class="make">
+    <view class="makeTal">
+      <navigator url="../../appointment/appointment">
+        <image src="../../../images/tel.png" class="makeimage" />
+        <text class="maketext">预约您的定制服务</text>
+        <view class="makebut">去预约</view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 预约 end -->
+
+
+  <!-- 导航切换 start -->
+  <view class="category space_between flex flex_nowrap">
+    <view data-index="{{-1}}" class="flex_shrink {{tab==index?'selected':''}}" bindtap="tabNav">全部</view>
+    <block wx:for="{{list.category_sub}}" wx:if="category_sub" wx:key="category_sub">
+      <view data-index="{{index}}" class="flex_shrink {{tab==index?'selected':''}}" bindtap="tabNav" data-name="{{item.name}}" data-id="{{item.id}}" data-index="{{index}}">{{item.name}}</view>
+    </block>
+  </view>
+  <!-- 导航切换 end -->
+
+  <!-- 产品列表 start -->
+  <block wx:if="{{list.goods.length>0}}">
+    <view class="product flex flex_wrap">
+      <block wx:for="{{list.goods}}" wx:key="image">
+
+        <!-- 一排两个 上图下文 start -->
+        <navigator url="../../goods-detail/goods-detail?goodsid={{item.id}}&id={{item.id}}" class="product_item flex_shrink">
+          <image src="{{item.thumb}}" mode="aspectFill"></image>
+          <view class="product_item_name overflow">{{item.title}}</view>
+          <view class="product_item_price">¥{{item.marketprice}}</view>
+        </navigator>
+        <!-- 一排两个 end -->
+
+        <!-- 一排一个 左图右文 start -->
+        <!-- <view class="productOne">
+          <navigator url="../../goods-detail/goods-detail?goodsid={{item.id}}"  class="productOne_item flex">
+            <image class="flex_shrink" src="{{item.thumb}}" mode="aspectFill"></image>
+            <view class="productOne_item_rig flex space_between flex_1 flex_column">
+              <view class="productOne_item_name overflowTwo">{{item.title}}</view>
+              <view class="productOne_item_price">¥{{item.marketprice}}</view>
+            </view>
+          </navigator>
+        </view> -->
+        <!-- 一排一个 左图右文 end -->
+
+      </block>
+    </view>
+  </block>
+  <!-- 产品列表 end -->
+  <block wx:else>
+    <view class="morePro1">
+      <image src="../../../images/more.png" class="moreimg"></image>
+      <view class="">暂无商品，请搜索其他商品看看吧！</view>
+    </view>
+  </block>
+</block>
+<block wx:else>
+  <block wx:if="{{num==0}}">
+    <loading hidden="{{loadingHidden}}">
+      加载中请稍后...
+    </loading>
+  </block>
+</block>
+<view class="noMore clear" hidden="{{hide}}">
+  没有更多内容了
+</view>

@@ -1,0 +1,37 @@
+<!--我的收藏跟足迹列表  -->
+<template name="collectionFootprint">
+<block wx:if="{{list.length>0}}">
+  <view class="trackBox">
+    <view class="itemBox">  
+      <view class="items">  
+        <block wx:for="{{list}}"  wx:key="{{index}}">
+          <block wx:if="{{item.deleted==0}}">
+            <view class="item"> 
+              <view bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}" style="{{item.txtStyle}}" 
+              class="inner txt trackBug">  
+                  <image mode="aspectFill" src="{{item.thumb}}" data-id="{{item.goodsid}}" bindtap="navtio"></image>
+                  
+                  <view class="trackBugText" data-id="{{item.goodsid}}" bindtap="navtio">
+                    <view class="trackBugTextAne">{{item.title}}</view>
+                    <view  class="trackPri">￥{{item.marketprice}}</view>
+                  </view> 
+              
+              </view>  
+              <view data-index="{{index}}" data-deleted="1" bindtap = "delItem" data-id="{{item.id}}" data-goodsid="{{item.goodsid}}" class="inner del cancel">
+                  <image src="../../images/deleat.png"></image>
+                  <text>删除</text>
+              </view>
+            </view> 
+          </block>   
+        </block>   
+      </view>  
+    </view>  
+  </view>
+</block>
+<block wx:else>
+  <view class="morePro">
+    <image src="../../images/more.png" class="moreimg"></image>
+    <view class="">暂无商品，请看看其他商品看看吧！</view>
+  </view>
+</block>
+</template>

@@ -1,0 +1,30 @@
+<!--发布帖子-->
+<form bindsubmit="submitComment">
+  <block wx:for="{{orderinfo}}" wx:key="id">
+    <view class="release">
+      <image mode="aspectFill" src="{{item.Goods.thumb}}" class="IndentCommodityImg"></image>
+      <view class="releaseTitle">{{item.Goods.title}}</view>
+    </view>
+  </block>
+  <textarea class="communityWords" value="{{communityWords}}" name="communityWords"  placeholder="分享你的购物心得..." />
+  <!--提交照片-->
+   <view class="commenttjcontainer clearfix">
+    <view id="uploaderFiles">
+      <block wx:for-items="{{files}}" wx:key="{{index}}">
+        <view class="commenttjimg">
+          <view bindtap="previewImage" id="{{item}}">
+            <image src="{{item}}" mode="aspectFill" />
+          </view>
+          <view bindtap="delBtn" data-index="{{index}}" class="delBtn">+</view>
+        </view>
+      </block>
+    </view>
+    <view class="commenttjimg" bindtap="setPhotoInfo">
+       <image src="../../images/addtz.png" mode="aspectFill"></image> 
+    </view>
+  </view> 
+  <!--提交照片 end  -->
+
+  <button class="submitBtn" form-type="submit">提交评价</button>
+</form>
+

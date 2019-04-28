@@ -1,0 +1,15 @@
+page {
+  background: #fff;
+}
+.morePro {
+  width: 100%;
+  text-align: center;
+  height: 360rpx;
+  margin-top: -360rpx;
+  position: absolute;
+  top: 50%;
+}
+.morePro .log {
+  text-align: left;
+  padding:0 15%;
+}

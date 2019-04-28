@@ -1,0 +1,23 @@
+<block wx:if="{{appointmentList.length>0}}">
+  <block wx:for="{{appointmentList}}" wx:key="appointmentList">
+    <view class="appointmentList">
+      <view class="start">
+        {{item.status!=0 && item.status!= null?'已确认':'未确认'}}
+      </view>
+      <image src="../../images/appointmentList.jpg" mode="aspectFill" class="appointmentImg"></image>
+      <view class="appointmentListView">
+        <view class="projectName">{{item.title}}</view>
+        <view class="remarks">{{item.remark}}</view>
+        <view class="contactInformation">
+          <view class="userTime"></view>
+          <view class="usreMesg"><text>{{item.username}}</text>{{item.phone}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</block>
+<block wx:else>
+  <view class="noMore clear">
+    您还没有预约订单
+  </view>
+</block>

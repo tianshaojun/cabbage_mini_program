@@ -1,0 +1,78 @@
+<view class="search">
+  <navigator url="../../search/search">
+    <view class="searchimg">
+
+    </view>
+    <view class="searchText">
+      <image src="../../../images/search.png" class="searchTextImg" />
+      <text class="searchTextwords">请输入关键字</text>
+    </view>
+  </navigator>
+</view>
+<!--手机商铺 index.wxml-->
+<view class="container">
+  <!-- 轮播图 start -->
+  <!-- 轮播图 -->
+  <view class="banner">
+    <import src="../../../template/banner/index.wxml" />
+    <template is="shops" data="{{list}}"></template>
+  </view>
+  <!-- 轮播图 end  -->
+  <!-- 预约 -->
+  <view class="make">
+    <view class="makeTal">
+      <navigator url="../../appointment/appointment">
+        <image src="../../../images/tel.png" class="makeimage" />
+        <text class="maketext">预约您的定制服务</text>
+        <view class="makebut">去预约</view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 分类 start -->
+  <view class="recommendList">
+    <scroll-view scroll-x="true" style="white-space: nowrap; display: flex;height:300rpx; overflow-x:scroll;">
+      <view class="jxRecommendList" wx:for="{{list.category_sub}}" wx:key="classViewList">
+        <navigator url="../../category-two/category-two?index={{index}}&title={{item.name}}&categoryId={{item.id}}&popular=1">
+          <view class="jxImagecon">
+            <image class="jxImage" src="{{item.thumb}}" mode="aspectFill"></image>
+            <view class="classBg">
+              <view class="classBgChild">
+                <view class="classTitle">{{item.name}}</view>
+              </view>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 分类 end  -->
+  <!-- 标识 start -->
+  <!-- <view class="classNav">
+    <view class="classNavCon">
+      <view class="classTitleCon flLeft"><text class="titleOne">正</text><text class="titleTwo">正品保障</text></view>
+      <view class="classTitleCon flLeft"><text class="titleOne">快</text><text class="titleTwo">超快发货</text></view>
+      <view class="classTitleCon flLeft"><text class="titleOne">新</text><text class="titleTwo">全部新品</text></view>
+    </view>
+  </view> -->
+  <!-- 标识 end  -->
+  <!-- 商品 start -->
+  <view class='twoShopList'>
+    <block wx:for="{{list.goods}}" wx:key="image">
+      <view class="shopList">
+        <navigator url="../../goods-detail/goods-detail?goodsid={{item.id}}&id={{item.id}}">
+          <view class="shopImgCon flLeft">
+            <image class="shopListImg" src="{{item.thumb}}"></image>
+          </view>
+          <view class="shopTitleCon flLeft">
+            <view class="classname overflowTwo">{{item.title}}</view>
+            <view><text class="prices">￥{{item.marketprice}}</text><text class="shopNum">销量：{{item.sales}}</text></view>
+          </view>
+        </navigator>
+      </view>
+    </block>
+  </view>
+  <!-- 商品 end -->
+</view>
+<view class="noMore clear" hidden="{{hide}}">
+  没有更多内容了
+</view>

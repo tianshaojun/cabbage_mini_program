@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicatorActiveColor="{{indicatorActiveColor}}">
+  <block wx:for="{{list.banner}}" wx:for-index="index" wx:key="getBanner">
+    <swiper-item class="indexBanner">
+      <image src="{{item.thumb}}" mode='aspectFill' />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 轮播 end -->
+
+<!-- 预约 -->
+<view class="make">
+  <view class="makeTal">
+    <navigator url="../../appointment/appointment">
+      <image src="../../../images/tel.png" class="makeimage" />
+      <text class="maketext">预约您的定制服务</text>
+      <view class="makebut">去预约</view>
+    </navigator>
+  </view>
+</view>
+<!-- 预约 end  -->
+
+<!-- 分类 start -->
+<view class="recommend">
+  <image class='recommend_bg' src='../../../images/nav_bg.png'></image>
+  <scroll-view class="scroll_view" scroll-x="true" style=" white-space: nowrap; display: block;">
+    <block wx:for="{{list.category_sub}}" wx:key="id">
+      <navigator url="../../category-two/category-two?index={{index}}&categoryId={{item.id}}&title={{item.name}}&popular=1" class="recommend_item">
+        <image src="{{item.thumb}}" mode="aspectFill"></image>
+        <view class="overflow">{{item.name}}</view>
+      </navigator>
+    </block>
+  </scroll-view>
+</view>
+<!-- 分类 end -->
+
+<!-- 特价专区 start -->
+<!-- <view class='special'>
+  <image class='special_bg' src='../../../images/special_bg.png' mode='widthFix'></image>
+  <image class='special_bg_title' src='../../../images/special.png' mode='widthFix'></image>
+  <view class='special_bg_titleWords'>特价88元起</view>
+</view> -->
+<!-- 特价专区 end -->
+
+<!-- 热门项目 start -->
+<view class='hotItem clearfix'>
+  <view class='hotItem_title'>热门项目</view>
+  <block wx:for="{{list.goods}}" wx:key="id">
+    <navigator url="../../goods-detail/goods-detail?goodsid={{item.id}}&id={{item.id}}" class='hotItem_list'>
+      <image src='{{item.thumb}}' mode='aspectFill'></image>
+      <view class='hotItem_list_name'>{{item.title}}</view>
+      <view class='hotItem_list_price'><text>¥</text>{{item.marketprice}}</view>
+    </navigator>
+  </block>
+</view>
+<!-- 热门项目 end -->
+<view class="noMore clear" hidden="{{hide}}">
+  没有更多内容了
+</view>

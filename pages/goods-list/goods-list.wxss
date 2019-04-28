@@ -1,0 +1,102 @@
+/*精品*/
+@import "../../template/goods-list/index.wxss";
+page{
+  background: #f7f7f7;
+}
+/* 搜索 end */
+.search {
+  width: 100%;
+  height: 88rpx;
+  background: #fff;
+  position: relative;
+  border-top:1rpx solid #f3f4f5;
+}
+.searchimg {
+  width: 600rpx;
+  height:60rpx;
+  background: #e5e5e5;
+  margin:14rpx auto;
+  border-radius: 30rpx;
+}
+
+.searchText {
+  width: 600rpx;
+  height: 60rpx;
+  position: absolute;
+  top:16rpx;
+  left: 75rpx;
+}
+.searchTextImg{
+  width:24rpx;
+  height:24rpx;
+   margin:18rpx 20rpx 18rpx 24rpx; 
+  float:left;
+}
+.searchTextwords{
+   float:left;
+   line-height:60rpx;
+   color:#666;
+   font-size:26rpx;
+}
+/* 搜索 end */
+
+/* 排序 start */
+.classNavButton{
+  display: flex;
+  justify-content: center;   /*两端对齐*/
+  align-items: center;       /*垂直居中*/
+  height: 72rpx;
+  background: #fff;
+  display: -webkit-flex;
+  margin-top: 20rpx;
+}
+
+.classNavButton_button{
+  flex:1;
+  height: 56rpx;
+  border-right:1rpx solid #e4e4e4;
+}
+.classNavButton .classNavButton_button:last-child{
+   border: 0
+}
+.classNavButton_view{
+  width:140rpx;
+  height:100%;
+  margin:auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 4rpx solid #fff;
+}
+.classNavButton_view.navActive{
+  color:#333;
+  border-bottom: 4rpx solid #fe860f;
+}
+.isCan{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttonGroup{
+  margin-left: 10rpx;
+}
+.buttonGroup .arrowGray{
+  width: 0;
+  height: 0;
+  border-left: 10rpx solid transparent;
+  border-right: 10rpx solid transparent;
+  border-bottom: 10rpx solid #ccc;
+  margin: 6rpx 0;
+}
+.arrowOrange{
+  width: 0;
+  height: 0;
+  border-left: 10rpx solid transparent;
+  border-right: 10rpx solid transparent;
+  border-bottom: 10rpx solid #fe860f;
+  margin: 6rpx 0;
+}
+.arrowRotate{
+  transform: rotate(180deg);
+}
+/* 排序 end */

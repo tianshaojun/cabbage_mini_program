@@ -1,0 +1,64 @@
+<!-- 分类 start -->
+<view class="recommend">
+  <scroll-view scroll-x="true" style=" white-space: nowrap; display: block;">
+    <block wx:for="{{recommend}}" wx:key="recommend">
+      <view class="recommend_item {{selseted==index?'item_selected':''}}" bindtap="clickChange" data-index="{{index}}">{{item.name}}</view>
+    </block>
+  </scroll-view>
+</view>
+<!-- 分类 end -->
+
+<!-- 轮播 start -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicatorActiveColor="{{indicatorActiveColor}}">
+  <block wx:for="{{list.banner}}" wx:for-index="index" wx:key="getBanner">
+    <swiper-item class="indexBanner">
+      <image src="{{item.thumb}}" mode='aspectFill' />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 轮播 end -->
+
+<!-- 预约 -->
+<view class="make">
+  <view class="makeTal">
+    <navigator url="../../appointment/appointment">
+      <image src="../../../images/tel.png" class="makeimage" />
+      <text class="maketext">预约您的定制服务</text>
+      <view class="makebut">去预约</view>
+    </navigator>
+  </view>
+</view>
+<!-- 预约 end  -->
+
+<!-- 分类 start -->
+<view class="recommend">
+  <scroll-view scroll-x="true" style=" white-space: nowrap; display: block;">
+    <block wx:for="{{list.category_sub}}" wx:key="classViewList">
+      <navigator url="../../category-two/category-two?index={{index}}&title={{item.name}}&categoryId={{item.id}}&popular=1" class="flex_shrink indexCategory_item" class=" category">
+        <image src="{{item.thumb}}" mode="aspectFill"></image>
+        <view class="overflow">{{item.name}}</view>
+      </navigator>
+    </block>
+  </scroll-view>
+</view>
+<!-- 分类 end -->
+<!-- 热门项目 start -->
+<view class='hotItem clearfix'>
+  <view class='hotItem_title'>每月新品</view>
+  <view class='hotItem_list flex flex_wrap'>
+    <block wx:for="{{list.goods}}" wx:key="id">
+      <navigator url="../../goods-detail/goods-detail?goodsid={{item.id}}&id={{item.id}}" class=" flex_shrink">
+        <image src='{{item.thumb}}' mode='aspectFill' class="recommendImg"></image>
+      </navigator>
+    </block>
+
+  </view>
+</view>
+<!-- 热门项目 end -->
+<view class="fixedBox">
+  <contact-button type="default-light"></contact-button>
+  <!-- <image class="goCart" src="../../images/center.png"></image> -->
+</view>
+<view class="noMore clear" hidden="{{hide}}">
+  没有更多内容了
+</view>

@@ -1,0 +1,67 @@
+<view class="search">
+  <navigator url="../../search/search">
+    <view class="searchText">
+      <image src="../../../images/search.png" class="searchTextImg" />
+      <text>搜索商品</text>
+    </view>
+  </navigator>
+</view>
+<view class="recommend">
+  <navigator url="../../goods-detail/goods-detail?id={{single.id}}">
+    <image class="recommend_img" src="{{single.thumb}}" mode="aspectFill"></image>
+  </navigator>
+  <image class="recommend_icon" mode="widthFix" src="../../../images/05/remmend_icon.png"></image>
+  <view class="recommend_title overflowTwo">{{single.title}}</view>
+</view>
+<view class="make">
+  <view class="makeTal">
+    <navigator url="../../appointment/appointment">
+      <image src="../../../images/tel.png" class="makeimage" />
+      <text class="maketext">预约您的定制服务</text>
+      <view class="makebut">去预约</view>
+    </navigator>
+  </view>
+</view>
+<!-- 导航切换 start -->
+<view class="category space_between">
+  <view data-id="0" class="{{categoryId==-1?'selected':''}}" data-index="-1" bindtap="bindViewTab" data-method="selectedItem">全部</view>
+  <block wx:for="{{list.category_sub}}"  wx:key="lg1">
+    <view data-id="{{item.id}}" class="{{categoryId==index?'selected':''}} " bindtap="bindViewTab" data-method="selectedItem"  data-id="{{item.id}}" data-index="{{index}}">{{item.name}}</view>
+  </block>
+</view>
+<!-- 导航切换 end -->
+
+<!-- 产品列表 start -->
+
+<view class="product flex flex_wrap" wx:if="{{list.goods.length>0}}">
+  <block wx:for="{{list.goods}}" wx:if="{{index<2}}"  wx:key="gl">
+    <view class="product_item flex_shrink">
+      <navigator url='../../goods-detail/goods-detail?id={{item.id}}'> 
+        <image src="{{item.thumb}}" mode="aspectFill"></image>
+        <view class="product_item_name overflow">{{item.title}}</view>
+        <view class="product_item_price">¥{{item.marketprice}}</view>
+      </navigator>
+    </view>
+  </block>
+
+</view>
+
+<view class="productOne" wx:if="{{list.goods.length>2}}">
+  <block wx:for="{{list.goods}}" wx:if="{{index>1}}"  wx:key="lg">
+    <navigator url="../../goods-detail/goods-detail?id={{item.id}}">
+      <view class="productOne_item flex">
+
+        <image class="flex_shrink" src="{{item.thumb}}" mode="aspectFill"></image>
+        <view class="productOne_item_rig flex space_between flex_1 flex_column">
+          <view class="productOne_item_name overflow">{{item.title}}</view>
+          <!-- <view class="productOne_item_tips overflow">库存({{item.total}})</view> -->
+          <view class="productOne_item_price">¥{{item.marketprice}}</view>
+        </view>
+
+      </view>
+    </navigator>
+
+  </block>
+</view>
+<!-- 产品列表 end -->
+<view hidden="{{hide}}" class="no-more-goods">没有更多啦</view>

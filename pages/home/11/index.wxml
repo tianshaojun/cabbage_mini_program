@@ -1,0 +1,68 @@
+<!--头部导航  -->
+<!--导航条-->
+<!-- 搜索 -->
+<!-- 轮播图 -->
+<view class="banner">
+  <import src="../../../template/banner/index.wxml" />
+  <template is="shops" data="{{list}}"></template>
+</view>
+<view class="make">
+  <view class="makeTal">
+    <navigator url="../../appointment/appointment">
+      <image src="../../../images/tel.png" class="makeimage" />
+      <text class="maketext">预约您的定制服务</text>
+      <view class="makebut">去预约</view>
+    </navigator>
+  </view>
+</view>
+<!-- 搜索 -->
+<view class="search">
+  <navigator url="../../search/search">
+    <view class="searchimg">
+
+    </view>
+    <view class="searchText">
+      <image src="../../../images/search.png" class="searchTextImg" />
+      <text class="searchTextwords">请输入关键字</text>
+    </view>
+  </navigator>
+</view>
+<!--标题 今日推荐 -->
+<view class="indexHeadline">
+  <image src="../../../images/g_gang.png" class="indexHeadlineimg"></image>
+  <text class="indexHeadlineOne">推荐分类</text>
+  <!-- <text class="indexHeadlineTow">|</text>
+    <text class="indexHeadlineTow">好书每日推</text> -->
+</view>
+<!--标题 发现好书 -->
+<view class="goodBook">
+  <navigator class="goodBookBox" wx:for="{{list.category_sub}}" wx:key="classViewList" url="../../category-two/category-two?index={{index}}&title={{item.name}}&categoryId={{item.id}}&popular=1">
+    <image src="{{item.thumb}}" mode="aspectFill" class="goodBookImg"></image>
+    <view class="goodBookText overflow">{{item.name}}</view>
+  </navigator>
+</view>
+<view class="blank"></view>
+<!--标题 今日推荐 -->
+<view class="indexHeadline">
+  <image src="../../../images/g_gang.png" class="indexHeadlineimg"></image>
+  <text class="indexHeadlineOne">今日推荐</text>
+  <!-- <text class="indexHeadlineTow">|</text>
+    <text class="indexHeadlineTow">好书每日推</text> -->
+</view>
+<view class="recommends" wx:for="{{list.goods}}" wx:key="image">
+  <navigator class="recommendBox" url="../../goods-detail/goods-detail?goodsid={{item.id}}&id={{item.id}}">
+    <image src="{{item.thumb}}" class="recommendImg" mode="aspectFill"></image>
+    <view class="recommendBoxRight">
+      <!-- <view class="recommendBoxRightOne">舍得,舍不得:带着《金刚金》旅行</view>
+        <view class="recommendBoxRightTow">作者: 蒋勋</view> -->
+      <view class="recommendBoxRightThree">{{item.title}}</view>
+    </view>
+    <view class="recommendPosi">
+      <text class="recommendPosiOne">￥{{item.marketprice}}</text>
+      <text class="recommendPosiTow">{{item.productprice}}</text>
+    </view>
+  </navigator>
+</view>
+<view class="noMore clear" hidden="{{hide}}">
+  没有更多内容了
+</view>

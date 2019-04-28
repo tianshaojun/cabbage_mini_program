@@ -1,0 +1,144 @@
+/* 分类页面 wxss */
+page{
+  width: 100%;
+}
+page,view,text,image{
+  box-sizing: border-box;
+} 
+.search {
+  width: 100%;
+  height: 88rpx;
+  background: #fff;
+  position: relative;
+  border-top:1rpx solid #f3f4f5;
+  border-bottom:1rpx solid #f3f4f5;
+}
+.searchimg {
+  width: 600rpx;
+  height:60rpx;
+  background: #e5e5e5;
+  margin:14rpx auto;
+  border-radius: 30rpx;
+}
+
+.searchText {
+  width: 600rpx;
+  height: 60rpx;
+  position: absolute;
+  top:16rpx;
+  left: 75rpx;
+}
+.searchTextImg{
+  width:24rpx;
+  height:24rpx;
+   margin:18rpx 20rpx 18rpx 24rpx; 
+  float:left;
+}
+.searchTextwords{
+   float:left;
+   line-height:60rpx;
+   color:#666;
+   font-size:26rpx;
+}
+.wrap{
+  border-top: 1rpx solid #fff;
+}
+/* 左侧 start */
+.classLeft{
+  width: 180rpx; 
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: #4d4d4d;
+  height: 100%;
+  background: #efefef;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  padding-top:80rpx;
+  overflow-y: scroll;
+}
+.classLeft .classLeft_list{
+  text-align: center;
+  width: 100%;
+  border-left: 8rpx solid #efefef;
+  border-bottom: 1rpx solid #fff;  
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 10rpx;
+}
+.classLeft .classLeft_list.active{
+  border-left: 8rpx solid #fb5660;
+  background: #fff;
+  color: #fb5660 ;
+  text-align: center;
+}
+/* 左侧 end */
+
+/* 右侧 start */
+.classRight{
+  background: #fff;
+  height: 100%;
+  width: 570rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  padding-top:80rpx;
+  overflow-y: scroll;
+}
+.classRight_title{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 54rpx 0 30rpx 0;
+  align-items: center;
+}
+.classRight_title_word{
+  color: #fe860f ;
+  font-size: 30rpx;
+}
+.classRight_title_line{
+  width: 36rpx;
+  height: 2rpx;
+  background: #cbcbcb;
+  margin:0 30rpx;
+}
+.classRight_item{
+  padding:0 0 0 20rpx;
+  margin-top: 30rpx;
+  text-align: center; 
+}
+.classRight_item .item_list{
+  font-size: 28rpx;
+  color: #333;
+  display:flex;
+  flex-wrap: wrap;
+}
+.item_list navigator{
+  margin-right: 8rpx;
+}
+.item_list .itemImage{
+  width:172rpx;
+  height: 172rpx; 
+  vertical-align: top;
+  margin-bottom: 14rpx;
+}
+.item_list .itemTitle{
+  width:172rpx;
+  display:-webkit-box;
+  text-align: center;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  overflow:hidden;
+  margin-bottom: 20rpx;
+}
+/* 右侧 end */
+.more{
+  padding-top:100rpx;
+  display: block;
+}
+.classRight .ncatr{
+  margin-top: 20rpx;
+}

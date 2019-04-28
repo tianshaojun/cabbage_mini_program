@@ -1,0 +1,190 @@
+/**首页 index.wxss**/
+ @import "../../../template/goods-list/index.wxss";
+ @import "../../../template/banner/index.wxss"; 
+page {
+  background-color: #f4f4f4;
+}
+
+.search {
+  width: 100%;
+  height:100rpx;
+  background-color: rgb(243, 243, 243);
+  position: relative;
+  border-top:1rpx solid #f3f4f5;
+}
+.searchimg {
+  width:698rpx;
+  height:60rpx;
+  background: #ffffff;
+  margin:20rpx auto;
+  border-radius: 30rpx;
+}
+
+.searchText {
+  /* width: 600rpx; */
+  height: 60rpx;
+  position: absolute;
+  top:16rpx;
+  left:250rpx;
+}
+.searchTextImg{
+  width:24rpx;
+  height:24rpx;
+   margin:25rpx 20rpx 18rpx 24rpx; 
+  float:left;
+}
+.searchTextwords{
+   float:left;
+   line-height:70rpx;
+   color:#888888;
+   font-size:26rpx;
+}
+/* 轮播图 start */
+
+.swiper {
+  height: 360rpx;
+}
+
+.slideImage {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* 轮播图 end  */
+/* 预约 start */
+.make {
+    width: 100%;
+    height: 88rpx;
+    background: #fff;
+    margin-top: 20rpx;
+}
+
+.makeTal {
+    width: 100%;
+    height: 88rpx;
+    position: relative;
+}
+
+.makeimage {
+    width: 28rpx;
+    height: 26rpx;
+    margin: 30rpx 16rpx 0 26rpx;
+}
+
+.maketext {
+    line-height: 88rpx;
+    color: #fe860f;
+}
+
+.makebut {
+    position: absolute;
+    width: 88rpx;
+    height: 36rpx;
+    top: 26rpx;
+    right: 30rpx;
+    color: #ff8804;
+    border: 1rpx solid #ff8804;
+    text-align: center;
+    line-height: 32rpx;
+    border-radius: 5rpx;
+    font-size: 24rpx;
+}
+
+/* 分类 start */
+
+.classIficationCon {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 0 10rpx;
+  border-bottom: 2rpx solid #eee;
+}
+
+.classIfication {
+  padding-top: 20rpx;
+  width: 25%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.ificationImg {
+  width: 110rpx;
+  height: 110rpx;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+.ificationTitle {
+  padding: 10rpx 0 20rpx 0;
+  font-size: 28rpx;
+  color: #444;
+}
+
+/* 分类 end  */
+
+/* 全部 start */
+
+.allShop {
+  background: #fff;
+}
+
+.allShopTitle {
+  color: #444;
+  font-size: 30rpx;
+  padding: 10rpx 30rpx 10rpx 30rpx;
+  text-align: center;
+  background: #ffffff;
+}
+
+.allShopList {
+  margin: 0rpx 20rpx;
+  padding-bottom: 25rpx;
+}
+
+.allShopImg {
+  border-radius: 6rpx;
+  width: 710rpx;
+  height: 320rpx;
+  vertical-align: middle;
+}
+
+/* 全部 end  */
+
+.latestOnlineBox{
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.fruitsMendTow {
+  display: flex;
+  justify-content: space-around;
+  overflow-x:scroll;
+  background: #fff;
+}
+
+.fruitsMendTowBox {
+  margin-left:2%;
+  width:31%;
+  min-height: 330rpx;
+  display: inline-block;
+  border: 1px solid #eee;
+  background: #fff;
+}
+.fruitsMendImgT {
+  width: 230rpx;
+  height: 230rpx;
+}
+.ishotShop-title{
+  overflow: hidden;
+   white-space : pre-wrap ;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  width:240rpx;
+  padding:0 20rpx;
+}
+.ishotShop-price{
+  color:#fe860f;
+  margin-top:25rpx;
+  text-align: center;
+}

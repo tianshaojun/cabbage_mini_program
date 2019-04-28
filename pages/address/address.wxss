@@ -1,0 +1,154 @@
+page {
+  background: #eee;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  font-size: 28rpx;
+  color: #666;
+}
+
+view, page, text, label, radio {
+  box-sizing: border-box;
+}
+
+.but {
+  width: 95%;
+}
+
+/* 地址列表 end */
+
+.listsBox {
+  padding-bottom: 110rpx;
+}
+
+.addnull {
+  width: 100%;
+  border: 2rpx solid #fff;
+}
+
+.addressList {
+  background: #fff;
+  margin-bottom: 20rpx;
+  padding: 22rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  flex: 8;
+}
+
+.address {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.editBtn {
+  color: #f2302f;
+  /* flex: 1; */
+}
+
+.lists button[type="default"] {
+  color: #f2302f;
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* 地址列表 end */
+
+/* 新增 start */
+
+.form button {
+  margin-bottom: 40rpx;
+}
+
+.formMesg {
+  background: #fff;
+  padding-left: 24rpx;
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  height: 88rpx;
+  line-height: 88rpx;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.items:last-child {
+  border-bottom: none;
+}
+
+.items_lf {
+  color: #323232;
+  font-size: 28rpx;
+  width: 140rpx;
+}
+
+.items_rig {
+  padding: 0 20rpx;
+  width: 522rpx;
+}
+
+.items_rig input {
+  height: 88rpx;
+  line-height: 88rpx;
+  display: block;
+  width: 100%;
+}
+
+.items_del {
+  width: 40rpx;
+  height: 40rpx;
+  color: #fff;
+  font-size: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  overflow: hidden;
+  margin: 24rpx 24rpx 0 0;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.tips {
+  padding: 10rpx 24rpx 40rpx 24rpx;
+}
+
+/* 新增 end */
+
+.no {
+  display: none;
+}
+
+.yes {
+  display: block;
+}
+
+.but-view {
+  width:95%;
+  /* position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 14px;
+  padding-right: 14px;
+  box-sizing: border-box;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 2.55555556;
+  border-radius: 5px;
+  -webkit-tap-highlight-color: transparent;
+  color: #fff;
+  background-color: #1aad19; */
+}

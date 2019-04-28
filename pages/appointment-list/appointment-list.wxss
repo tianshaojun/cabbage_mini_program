@@ -1,0 +1,79 @@
+/* pages/appointmentList/appointmentList.wxss */
+
+.appointmentList {
+  width: 702rpx;
+  height: 248rpx;
+  background: #fff;
+  padding:34rpx 0; 
+  margin: 20rpx 0 0 24rpx; 
+  position: relative;
+}
+
+.appointmentImg {
+  width: 702rpx;
+  height: 248rpx;
+}
+
+.appointmentListView {
+  position: absolute;
+  top: 34rpx;
+  left: 24rpx;
+  z-index: 1;
+  width: 662rpx;
+  height: 248rpx;
+  color: #fff;
+  padding: 0 20rpx;
+}
+
+.projectName {
+  margin-top: 20rpx;
+  font-size: 40rpx;
+}
+
+.remarks {
+  line-height: 1.5;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  height: 70rpx;
+  /* border:1px solid #ffcb00; */
+}
+
+.contactInformation {
+  margin-top: 15rpx;
+  display: flex;
+  justify-content: space-between;
+  /* text-align:right; */
+}
+
+.contactInformation .userTime {
+  width: 40%;
+}
+
+.contactInformation .usreMesg {
+  text-align: right;
+  width: 60%;
+  display: flex;
+}
+
+.contactInformation text {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 10rpx;
+}
+
+.start {
+  position: absolute;
+  left: 50%;
+  margin-left: -52rpx;
+  width: 104rpx;
+  height: 46rpx;
+  color:#fff;
+  background: #ffcb02;
+  font-size:28rpx;
+  text-align: center;
+  line-height: 46rpx;
+}

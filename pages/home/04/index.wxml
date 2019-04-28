@@ -1,0 +1,68 @@
+<!--服装售卖 index.wxml-->
+
+<view class="container">
+  <!-- 搜索 start -->
+  <view class="search">
+    <navigator url="../../search/search">
+      <view class="searchimg">
+        <image src="../../../images/search.png" class="searchTextImg" />
+      </view>
+    </navigator>
+  </view>
+  <!-- 搜索 end  -->
+  <!-- 轮播图 start -->
+<import src="../../../template/banner/index.wxml" />
+<template is="shops" data="{{list}}"></template>
+  <!-- 轮播图 end  -->
+
+  <!-- 预约 -->
+  <view class="make">
+    <view class="makeTal">
+      <navigator url="../../appointment/appointment">
+        <image src="../../../images/tel.png" class="makeimage" />
+        <text class="maketext">预约您的定制服务</text>
+        <view class="makebut">去预约</view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 预约 end  -->
+
+  <!-- 分类 start -->
+  <view class='classIficationCon'>
+    <block wx:for="{{list.category_sub}}" wx:key="id">
+      <view class='classIfication'>
+        <navigator url="../../category-two/category-two?index={{index}}&categoryId={{item.id}}&title={{item.name}}&popular=1">
+          <image class='ificationImg' src='{{item.thumb}}'></image>
+          <view class='ificationTitle overflow'>{{item.name}}</view>
+        </navigator>
+      </view>
+    </block>
+  </view>
+  <!-- 分类 end -->
+
+  <!-- 推荐商品 start -->
+  <view class='allShop'>
+    <view class='allShopTitle'>
+      <view>推荐商品</view>
+    </view>
+    <block wx:for="{{list.goods}}" wx:key="id">
+      <view class='allShopList'>
+        <view class='shopList'>
+          <navigator url="../../goods-detail/goods-detail?goodsid={{item.id}}&id={{item.id}}">
+            <image class='allShopImg' src='{{item.thumb}}' mode="aspectFill"></image>
+            <view class='shopListTitleBg'>
+              <view class='bgTitle overflow'>{{item.title}}</view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </block>
+
+    <!-- 清除浮动 -->
+    <view class='clear'></view>
+    <view class="noMore clear" hidden="{{hide}}">
+      没有更多内容了
+    </view>
+  </view>
+  <!-- 推荐商品 end -->
+</view>

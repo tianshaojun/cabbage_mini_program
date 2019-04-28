@@ -1,0 +1,97 @@
+<!-- 地址列表 start -->
+<view class="lists" hidden="{{listStatus}}">
+  <block wx:if="{{list.addressList.length>0}}">
+    <radio-group bindchange="radioChange" class="listsBox">
+      <block wx:for="{{list.addressList}}" wx:key="id">
+        <view class="addressList">
+          <label data-method="setDefaultBt" bindtap="bindViewTab" data-addressid="{{item.id}}" class="label">
+            <radio color="#f2302f" checked="{{item.isdefault==1}}" />
+            <view>
+              <view>{{item.realname}}-{{item.mobile}}</view>
+              <view class="address">{{item.province}}-{{item.city}}-{{item.area}}</view>
+              <view class="address">{{item.address}}</view>
+            </view>
+          </label>
+          <view class="editBtn" data-editid="{{item.id}}" data-newadd="1" data-editprovince="{{item.province}}" data-editcity="{{item.city}}" data-editarea="{{item.area}}" data-editlinkman="{{item.realname}}" data-editmobile="{{item.mobile}}" data-editaddress="{{item.address}}"
+            data-method="editBt" bindtap="bindViewTab">编辑</view>
+        </view>
+      </block>
+    </radio-group>
+  </block>
+  <block wx:else>
+    <view class="morePro">
+      <view class="">你还没有收货地址，请添加收货地址！</view>
+    </view>
+  </block>
+  <!-- <view class="addnull"></view> -->
+  <button class="submitBtn" data-newadd="2" data-method="addAddress" bindtap="bindViewTab">新增收货地址</button>
+</view>
+
+
+<!-- 地址列表 end -->
+
+<!-- 新增地址 start -->
+<view class="form" hidden="{{addStatus}}">
+  <form bindsubmit="formSubmit">
+    <view class="formMesg">
+      <view class="items">
+        <view class="items_lf">收货人</view>
+        <view class="items_rig">
+          <input type="text" name="realname" value="{{editLinkMan}}" bindinput="bindKeyInput" data-inputindex="0" placeholder="姓名" />
+        </view>
+        <view class="items_del {{newAdd!=1?'hidden':''}}">
+          <icon type="clear" size="20" color="#999" bindtap="delVal" data-index="0" />
+        </view>
+      </view>
+
+      <view class="items">
+        <view class="items_lf">联系电话</view>
+        <view class="items_rig">
+          <input type="number" name="mobile" maxlength="11" value="{{editMobile}}" bindinput="bindKeyInput" data-inputindex="1" placeholder="11位手机号" />
+        </view>
+        <view class="items_del {{newAdd!=1?'hidden':''}}">
+          <icon type="clear" size="20" color="#999" bindtap="delVal" data-index="1" />
+        </view>
+      </view>
+      <view class="items">
+        <view style="display:none;">
+          <input type="text" value="{{region[0]}}" name="province" />
+          <input type="text" value="{{region[1]}}" name="city" />
+          <input type="text" value="{{region[2]}}" name="area" />
+        </view>
+        <view class="items_lf">省市区</view>
+        <view class="items_rig">
+          <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+            <view class="picker">
+              {{region[0]}}-{{region[1]}}-{{region[2]}}
+            </view>
+          </picker>
+        </view>
+        <view class="items_del">+</view>
+      </view>
+      <view class="items">
+        <view class="items_lf">详细地址</view>
+        <view class="items_rig">
+          <input type="text" name="address" value="{{editAddress}}" bindinput="bindKeyInput" data-inputindex="2" placeholder="请输入详细街道" />
+        </view>
+        <view class="items_del {{newAdd!=1?'hidden':''}}">
+          <icon type="clear" size="20" color="#999" bindtap="delVal" data-index="2" />
+        </view>
+      </view>
+    </view>
+    <view class="tips">详细地址需填写楼栋楼层或房间号信息</view>
+    <block wx:if="{{anniu}}">
+      <button formType="submit" class="but" type="primary">确认</button>
+    </block>
+    <block wx:else>
+      <button  class="but-view">提交中</button>
+    </block>
+    <block wx:if="{{newAdd==1}}">
+      <button type="default" class="but" data-method="delBt" bindtap="bindViewTab">删除地址</button>
+    </block>
+    <block wx:elif="{{newAdd==2}}">
+      <button type="default" class="but" data-method="cancel" bindtap="bindViewTab">取消</button>
+    </block>
+  </form>
+</view>
+<!-- 新增地址 end -->

@@ -1,0 +1,233 @@
+/**首页 index.wxss**/
+ @import "../../../template/goods-list/index.wxss";
+ @import "../../../template/banner/index.wxss"; 
+page {
+   background-color: #ffdc7e;
+}
+
+.search {
+  width: 100%;
+  height:100rpx;
+  background-color: rgb(243, 243, 243);
+  position: relative;
+  border-top:1rpx solid #f3f4f5;
+}
+.searchimg {
+  width:698rpx;
+  height:60rpx;
+  background: #ffffff;
+  margin:20rpx auto;
+  border-radius: 30rpx;
+}
+
+.searchText {
+  /* width: 600rpx; */
+  height: 60rpx;
+  position: absolute;
+  top:16rpx;
+  left:250rpx;
+}
+.searchTextImg{
+  width:24rpx;
+  height:24rpx;
+   margin:25rpx 20rpx 18rpx 24rpx; 
+  float:left;
+}
+.searchTextwords{
+   float:left;
+   line-height:70rpx;
+   color:#888888;
+   font-size:26rpx;
+}
+/* 轮播图 start */
+
+.swiper {
+   height:360rpx;
+}
+
+.slideImage {
+   width: 100%;
+   height: 100%;
+   vertical-align: middle;
+}
+
+/* 轮播图 end  */
+/* 预约 start */
+.make {
+    width: 100%;
+    height: 88rpx;
+    background: #fff;
+    margin-top: 20rpx;
+}
+
+.makeTal {
+    width: 100%;
+    height: 88rpx;
+    position: relative;
+}
+
+.makeimage {
+    width: 28rpx;
+    height: 26rpx;
+    margin: 30rpx 16rpx 0 26rpx;
+}
+
+.maketext {
+    line-height: 88rpx;
+    color: #fe860f;
+}
+
+.makebut {
+    position: absolute;
+    width: 88rpx;
+    height: 36rpx;
+    top: 26rpx;
+    right: 30rpx;
+    color: #ff8804;
+    border: 1rpx solid #ff8804;
+    text-align: center;
+    line-height: 32rpx;
+    border-radius: 5rpx;
+    font-size: 24rpx;
+}
+/* 分类 start */
+
+.recommendList {
+   margin: 20rpx 0 20rpx 20rpx;
+}
+
+.jxRecommendList {
+   width: 228rpx;
+   height: 300rpx;
+   margin-right: 16rpx;
+   border-radius: 10rpx;
+   display: inline-block;
+}
+
+.jxImagecon {
+   width: 228rpx;
+   height: 300rpx;
+}
+
+.jxImage {
+   border-radius: 10rpx;
+   width: 228rpx;
+   height: 300rpx;
+   vertical-align: middle;
+   position: relative;
+}
+
+.classBg {
+   width: 208rpx;
+   height: 80rpx;
+   border: 6rpx solid #e8e6e5;
+   position: absolute;
+   z-index: 10;
+   margin: -90rpx 10rpx 0 10rpx;
+}
+
+.classBgChild {
+   width: 188rpx;
+   height: 58rpx;
+   background-color: rgba(255, 255, 255, 0.68);
+   margin: 4rpx auto;
+}
+
+.classTitle {
+   text-align: center;
+   line-height: 56rpx;
+   color: #666;
+   font-size: 24rpx;
+}
+
+/* 分类 end  */
+
+/* 标识 start */
+
+.classNav {
+   color: #fff;
+   width: 100%;
+   height: 66rpx;
+   line-height: 66rpx;
+   background: rgba(0, 0, 0, 0.2);
+   padding: 0 40rpx;
+}
+
+.classNavCon {
+   width: 560rpx;
+   margin: 0 auto;
+}
+
+.classTitleCon {
+   margin-right: 50rpx;
+}
+
+.titleOne {
+   width: 38rpx;
+   height: 38rpx;
+   line-height: 36rpx;
+   border: 2rpx solid #fff;
+   border-radius: 50%;
+   font-size: 22rpx;
+   display: inline-block;
+   text-align: center;
+   margin-right: 10rpx;
+}
+
+.classNav .classTitleCon:last-child {
+   margin-right: 0;
+}
+
+/* 标识 end  */
+
+/* 商品 start */
+
+.twoShopList {
+   color: #444;
+   font-size: 32rpx;
+   margin-top: 30rpx;
+   background: #fff;
+}
+
+.shopList {
+   height: 200rpx;
+   border-bottom: 2rpx solid #f4f4f4;
+}
+
+.shopImgCon {
+   margin: 20rpx 20rpx;
+}
+
+.shopListImg {
+   width: 160rpx;
+   height: 160rpx;
+   vertical-align: middle;
+}
+
+.shopTitleCon {
+   height: 160rpx;
+   margin: 20rpx 0;
+   width: 530rpx;
+}
+
+.classname {
+   height: 110rpx;
+   color: #333;
+   font-size: 28rpx;
+}
+
+.prices {
+   width: 220rpx;
+   color: #f60;
+   font-size: 26rpx;
+   margin-right: 20rpx;
+   display: inline-block;
+}
+
+.shopNum {
+   color: #666;
+   font-size: 24rpx;
+}
+
+/* 商品 end  */
+.noMore{background: #fff;}

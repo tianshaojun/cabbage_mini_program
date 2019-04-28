@@ -1,0 +1,45 @@
+<!--精品推荐  -->
+<template name="boutique">
+<view class="listar clearfix">
+ <block wx:if="{{redic==1}}">
+  <block wx:for="{{list.goods}}" wx:key="image">
+      <navigator class="list-view" url="../goods-detail/goods-detail?id={{item.id}}&goodsid={{item.id}}">
+        <image class="list-image" src="{{item.thumb}}" mode="aspectFill"></image>
+        <view class="s-item">{{item.title}}</view>
+        <view class="price">￥{{item.marketprice}}</view>
+      </navigator>
+  </block>
+   </block>
+   <block wx:else> 
+    <block wx:for="{{list.goods}}" wx:key="image">
+      <navigator class="list-view" url="../goods-detail/goods-detail?id={{item.id}}&goodsid={{item.id}}" redirect>
+        <image class="list-image" src="{{item.thumb}}" mode="aspectFill"></image>
+        <view class="s-item">{{item.title}}</view>
+        <view class="price">￥{{item.marketprice}}</view>
+      </navigator>
+  </block>
+   </block>
+</view>
+</template>
+<template name="boutique1">
+<view class="listar clearfix">
+ <block wx:if="{{redic==1}}">
+  <block wx:for="{{list.goods}}" wx:key="image">
+      <navigator class="list-view" url="../../goods-detail/goods-detail?id={{item.id}}&goodsid={{item.id}}">
+        <image class="list-image" src="{{item.thumb}}" mode="aspectFill"></image>
+        <view class="s-item">{{item.title}}</view>
+        <view class="price">￥{{item.marketprice}}</view>
+      </navigator>
+  </block>
+   </block>
+   <block wx:else> 
+    <block wx:for="{{list.goods}}" wx:key="image">
+      <navigator class="list-view" url="../../goods-detail/goods-detail?id={{item.id}}&goodsid={{item.id}}" redirect>
+        <image class="list-image" src="{{item.thumb}}" mode="aspectFill"></image>
+        <view class="s-item">{{item.title}}</view>
+        <view class="price">￥{{item.marketprice}}</view>
+      </navigator>
+  </block>
+   </block>
+</view>
+</template>

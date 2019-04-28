@@ -1,0 +1,200 @@
+/**index.wxss**/
+@import "../../../template/banner/index.wxss";
+
+.search {
+  padding: 16rpx 30rpx;
+  position: relative;
+  z-index: 2;
+  margin-top: -90rpx;
+}
+.searchimg {
+  width: 600rpx;
+  height:60rpx;
+  background: #e5e5e5;
+  margin:14rpx auto;
+}
+.searchText {
+  padding-left: 20rpx;
+  background: #fff;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #999;
+}
+.searchTextImg{
+  width:30rpx;
+  height:30rpx;
+  margin:15rpx 20rpx 0;  
+}
+
+.banner {
+   width: 100%;
+}
+
+/* 暂无数据 start */
+.morePro1 {
+   width: 100%;
+   text-align: center;
+   height: 360rpx;
+}
+.moreimg {
+   margin: 30rpx auto;
+}
+/* 暂无数据 end */
+
+.swiper-container{
+  width: 750rpx;
+  position: relative;  
+}
+.swiper_box {
+  width: 100%;
+  height:410rpx;
+}
+swiper-item image {
+  width: 100%;
+  display: inline-block;
+  overflow: hidden;
+  height:410rpx;
+}
+.swiper-container .dots{  
+  position: absolute;  
+  left: 0;  
+  right: 0;  
+  bottom: 20rpx;  
+  display: flex;  
+  justify-content: center;  
+}  
+.swiper-container .dots .dot{  
+  margin: 0 8rpx;  
+  width: 14rpx;  
+  height: 14rpx;  
+  background: #fff;  
+  border-radius: 50%;  
+  transition: all .6s;  
+  opacity: .5;
+}  
+.swiper-container .dots .dot.active{  
+  width: 14rpx;  
+  opacity: 1;
+}
+
+.make {
+  width: 100%;
+  height:88rpx;
+  background: #fff;
+}
+
+.makeTal {
+  width: 100%;
+  height: 88rpx;
+  position: relative;
+  border-bottom:1px solid #999;
+}
+
+.makeimage {
+  width: 28rpx;
+  height: 26rpx;
+  margin: 30rpx 16rpx 0 26rpx;
+}
+
+.maketext {
+  line-height: 88rpx;
+  color: #fe860f;
+}
+
+.makebut {
+  position: absolute;
+  width: 88rpx;
+  height: 36rpx;
+  top: 26rpx;
+  right: 30rpx;
+  color: #ff8804;
+  border: 1rpx solid #ff8804;
+  text-align: center;
+  line-height: 36rpx;
+  border-radius: 5rpx;
+  font-size: 24rpx;
+}
+
+/* 分类 start */
+.classView{
+  /* width:100%; */
+  background: #fff;
+  padding: 20rpx 0 0 20rpx;
+  border-bottom: 20rpx solid #f1f1f1;
+  overflow: hidden;
+  box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+}
+.classViewList{
+  width: 25%;
+  text-align: center;
+  display: inline-block;
+  margin-right: 20rpx;
+}
+.classViewList image{
+  width: 100%;
+  height: 140rpx;
+}
+.classViewList .productTitle{
+  width: 100%;
+  color: #666;
+}
+/* 分类 start */
+
+/* 商品列表 start */
+.type-container{
+  padding: 0 20rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 28rpx;
+  color: #222;
+  background-color: #fff;
+}
+.type-container text{
+  width: 12rpx;
+  height: 12rpx;
+  display: inline-block;
+  background: #ff6767;
+  border-radius: 50%;
+  margin-right: 10rpx;
+  color: #666;
+}
+.bout {
+  width: 100%;
+   background: #fff; 
+   margin-top:20rpx;
+   padding-top: 20rpx;
+}
+.listar {
+  width: 100%;
+}
+.listar .list-view {
+  width: 50%;
+  margin-bottom: 20rpx;
+  font-size: 28rpx;
+  padding: 0 10rpx;
+}
+.list-image {
+  width: 100%;
+  height: 350rpx;
+  overflow: hidden;
+}
+.s-item {
+  margin-top: 10rpx;
+  color: #666;
+}
+.price {
+  color: #f60;
+}
+.price text{
+  font-size: 24rpx;
+  color: #a8a8a8;
+  margin-left: 20rpx;
+}
+/* 商品列表 start */
+
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}

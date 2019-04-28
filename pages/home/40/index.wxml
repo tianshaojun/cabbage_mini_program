@@ -1,0 +1,40 @@
+<view class="search">
+  <navigator url="../../search/search">
+    <view class="searchText">
+      <image src="../../../images/search.png" class="searchTextImg" />
+      <text>搜索商品</text>
+    </view>
+  </navigator>
+</view>
+<!--index.wxml-->
+<view class="swiper-container">
+  <import src="../../../template/banner/index.wxml" />
+  <template is="shops" data="{{list}}"></template>
+</view>
+
+<view class='index_one' wx:if="{{list.category_sub.length>0}}">
+  <view class='index_one_left'>
+    <navigator url="../../category-two/category-two?index=0&title={{list.category_sub[0].name}}&categoryId={{list.category_sub[0].id}}&popular=1">
+      <!-- url="../../goods/list/index?pcate={{list.category_sub[0].parentid}}&ccate={{category[0].id}}"> -->
+      <image src='{{list.category_sub[0].thumb}}' mode='widthFix'></image>
+    </navigator>
+  </view>
+  <view class='index_one_right'>
+    <navigator url="../../category-two/category-two?index=1&title={{list.category_sub[1].name}}&categoryId={{list.category_sub[1].id}}&popular=1">
+      <image src='{{list.category_sub[1].thumb}}' mode='aspectFill'></image>
+    </navigator>
+    <navigator url="../../category-two/category-two?index=2&title={{list.category_sub[2].name}}&categoryId={{list.category_sub[2].id}}&popular=1">
+      <image src='{{list.category_sub[2].thumb}}' mode='aspectFill'></image>
+    </navigator>
+  </view>
+</view>
+<view class='index_two'>
+  <block wx:for="{{list.goods}}" wx:key="rn">
+    <navigator url='../../goods-detail/goods-detail?id={{item.id}}&goodsid={{item.id}}'>
+      <image src='{{item.thumb}}' mode='widthFix'></image>
+    </navigator>
+  </block>
+</view>
+<view class="noMore clear" hidden="{{hide}}">
+  没有更多内容了
+</view>

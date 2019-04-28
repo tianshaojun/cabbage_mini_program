@@ -1,0 +1,86 @@
+<!-- 搜索 -->
+<block wx:if="{{opid!='' && opid!=undefined}}">
+   <!-- 搜索 start -->
+  <view class="search">
+    <navigator url="../../search/search">
+      <view class="searchText">
+        <image src="../../../images/search.png" class="searchTextImg" />
+        <text>搜索商品</text>
+      </view>
+    </navigator>
+  </view>
+  <!-- 搜索 end -->
+  <!-- 轮播图 -->
+  <view class="banner">
+     <import src="../../../template/banner/index.wxml" />
+     <template is="shops" data="{{list}}"></template>
+  </view>
+  <!--推荐分类  -->
+   <view class="makeTalTowBox">
+      <block wx:for="{{list.category_sub}}" wx:key="classViewList" class="makeTalTow">
+        <navigator class="makeTalTow" url="../../category-two/category-two?index={{index}}&categoryId={{item.id}}&title={{item.name}}&popular=1">
+          <image src="{{item.thumb}}" mode="aspectFill" class="makeTalTowImg"></image>
+        </navigator>
+      </block>
+    </view>
+   <!-- 预约 -->
+  <view class="make">
+    <view class="makeTal">
+      <navigator url="../../appointment/appointment">
+        <image src="../../../images/tel.png" class="makeimage" />
+        <text class="maketext">预约您的定制服务</text>
+        <view class="makebut">去预约</view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 预约 end  -->
+
+  <view class="recommend">
+      <view class="recommendOne">精选宝贝</view>
+      <!-- <view class="recommendTow">纹身爱好者的社区</view> -->
+  </view>
+  
+    <view class="fruitsMendTow" style="width:100%;overflow:hidden;">
+      <view class="latestOnlineBox" >
+       
+        <navigator class="fruitsMendTowBox" wx:for="{{ishotShop}}" wx:key="classViewList" url="../../goods-detail/goods-detail?id={{item.id}}&goodsid={{item.id}}">
+          <image src="{{item.thumb}}" mode="aspectFill" class="fruitsMendImgT"></image> 
+          <view class="ishotShop">
+            <view class="ishotShop-title">{{item.title}}</view>
+          </view>
+        </navigator>
+      </view>
+  
+  </view>
+
+  <!--首页产品  -->
+   <view class="recommend recommends">
+      <view class="recommendOne">全部商品</view>
+      <!-- <view class="recommendTow">身体发肤受之父母，动针前想清楚</view> -->
+  </view>
+  
+  <view class="fruitsProBoxOne">
+    <view class="fruitsPro" wx:for="{{list.goods}}" wx:key="image">
+      <navigator class="fruitsProBox" url="../../goods-detail/goods-detail?goodsid={{item.id}}&id={{item.id}}">
+        <image class="fruitsProBoxImg" src="{{item.thumb}}" mode="aspectFill"></image>
+        <view class="fruitsProBottom">
+          <view class="fruitsProBotTop">{{item.title}}</view>
+          <text class="fruitsProBoxText">￥{{item.marketprice}}</text>
+        </view>
+      </navigator>
+    </view>
+    <view class="noMore clear" hidden="{{hide}}">
+      没有更多内容了
+    </view>
+  </view>
+</block>
+<block wx:else>
+  <block wx:if="{{num==0}}">
+    <loading hidden="{{loadingHidden}}">
+      加载中请稍后...
+    </loading>
+  </block>
+  <block wx:else>
+    无法获取到openid
+  </block>
+</block>

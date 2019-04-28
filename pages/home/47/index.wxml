@@ -1,0 +1,95 @@
+<block wx:if="{{opid!='' && opid!=undefined}}">
+  <!-- 轮播图 start-->
+  <view class="banner">
+    <import src="../../../template/banner/index.wxml" />
+    <template is="shops" data="{{list}}"></template>
+  </view>
+  <!-- 轮播图 end-->
+  <view class="search">
+    <navigator url="../../search/search">
+      <view class="searchText flex space_between">
+        <view>搜索商品</view>
+        <image src="../../../images/search.png" class="searchTextImg" />
+      </view>
+    </navigator>
+  </view>
+  <!-- 搜索 end -->
+  <!-- 预约 start -->
+  <view class="make">
+    <view class="makeTal">
+      <navigator url="../../appointment/appointment">
+        <image src="../../../images/tel.png" class="makeimage" />
+        <text class="maketext">预约您的定制服务</text>
+        <view class="makebut">去预约</view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 预约 end -->
+
+  <!-- 分类 start -->
+  <view class="classView flex flex_wrap">
+    <block wx:for="{{list.category_sub}}" wx:key="classViewList">
+      <navigator class="classViewList flex_shrink" url="../../category-two/category-two?index={{index}}&title={{item.name}}&categoryId={{item.id}}&popular=1">
+        <image src="{{item.thumb}}" mode="aspectFill"></image>
+        <view class="overflow productTitle">{{item.name}}</view>
+      </navigator>
+    </block>
+  </view>
+  <!-- 分类 end -->
+
+  <!-- 导航切换 start -->
+  <view class="category flex flex_nowrap space_between">
+    <view data-id="0" class="{{categoryId==-1?'selected':''}}" data-index="-1" bindtap="bindViewTab" data-method="selectedItem">全部</view>
+    <block wx:for="{{list.category_sub}}" wx:key="lg1">
+      <view data-id="{{item.id}}" class="{{categoryId==index?'selected':''}} " bindtap="bindViewTab" data-method="selectedItem" data-id="{{item.id}}" data-index="{{index}}">{{item.name}}</view>
+    </block>
+  </view>
+  <!-- 导航切换 end -->
+
+  <!-- 产品列表 start -->
+  <block wx:if="{{list.goods.length>0}}">
+    <!-- <import src="../../../template/goods-list/index.wxml" /> 
+     <template is="boutique1" data="{{list,redic}}"></template>  -->
+    <view class="listar flex space_between flex_wrap">
+      <block wx:if="{{redic==1}}">
+        <block wx:for="{{list.goods}}" wx:key="image">
+          <navigator class="list-view flex_shrink" url="../../goods-detail/goods-detail?id={{item.id}}&goodsid={{item.id}}">
+            <image class="list-image" src="{{item.thumb}}" mode="aspectFill"></image>
+            <view class="s-item overflow">{{item.title}}</view>
+            <view class="price">￥{{item.marketprice}}</view>
+          </navigator>
+        </block>
+      </block>
+      <block wx:else>
+        <block wx:for="{{list.goods}}" wx:key="image">
+          <navigator class="list-view" url="../../goods-detail/goods-detail?id={{item.id}}&goodsid={{item.id}}" redirect>
+            <image class="list-image" src="{{item.thumb}}" mode="aspectFill"></image>
+            <view class="s-item overflow">{{item.title}}</view>
+            <view class="price">￥{{item.marketprice}}</view>
+          </navigator>
+
+        </block>
+      </block>
+    </view>
+  </block>
+  <!-- 产品列表 end -->
+  <block wx:else>
+    <view class="morePro1">
+      <image src="../../../images/more.png" class="moreimg"></image>
+      <!-- <view class="">暂无商品，请搜索其他商品看看吧！</view> -->
+    </view>
+  </block>
+</block>
+<block wx:else>
+  <block wx:if="{{num==0}}">
+    <loading hidden="{{loadingHidden}}">
+      加载中请稍后...
+    </loading>
+  </block>
+  <block wx:else>
+    无法获取到openid
+  </block>
+</block>
+<view class="noMore clear" hidden="{{hide}}">
+  没有更多内容了
+</view>

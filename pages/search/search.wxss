@@ -1,0 +1,67 @@
+/*精品*/
+@import "../../template/goods-list/index.wxss";
+
+page {
+  background: #f2f2f2;
+}
+
+.search {
+  background-color: #fff;
+  height: 74rpx;
+  padding: 7rpx 0 0 24rpx;
+  position: relative;
+  margin-bottom: 15rpx;
+}
+
+.searchView {
+  width: 618rpx;
+  height: 60rpx;
+  background: #e5e5e5;
+  border-radius: 100rpx;
+  position: relative;
+}
+
+.searchicon {
+  width: 24rpx;
+  height: 24rpx;
+  position: absolute;
+  top: 20rpx;
+  left: 28rpx;
+}
+
+.int {
+  height: 60rpx;
+  width: 480rpx;
+  padding-left: 75rpx;
+
+}
+
+.phcolor {
+  color: #323232;
+  font-family: Microsoft YaHei;
+  font-size: 26rpx;
+}
+
+.cancel {
+  height: 74rpx;
+  color: #a5a5a5;
+  font-size: 30rpx;
+  position: absolute;
+  top: 0;
+  right: 20rpx;
+  line-height: 74rpx;
+  padding: 0 10rpx;
+  /* border:1px solid #323232; */
+}
+
+.sec {
+  color: #d74b2d;
+}
+
+.clone {
+  width: 24rpx;
+  height: 24rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 28rpx;
+}

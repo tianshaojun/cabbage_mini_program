@@ -1,0 +1,155 @@
+/**index.wxss**/
+swiper{
+  max-height: 300rpx;
+}
+.indexBanner{
+  overflow: hidden;
+}
+.indexBanner image{
+  height: 300rpx;
+  width: 100%;
+}
+
+/*导航 start*/
+.recommend {
+  width: 100%;
+  /* height: 200rpx; */
+}
+.recommend_item {
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+  font-size: 30rpx;
+  color: #888;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #fff;
+}
+.item_selected{
+  color: #333; 
+  border-bottom: 1rpx solid #111;
+}
+/*导航 end */
+
+/* 预约 start */
+
+.make {
+    width: 100%;
+    height: 88rpx;
+    background: #fff;
+    /* margin-top: 20rpx; */
+}
+.makeTal {
+    width: 100%;
+    height: 88rpx;
+    position: relative;
+}
+.makeimage {
+    width: 28rpx;
+    height: 26rpx;
+    margin: 30rpx 16rpx 0 26rpx;
+}
+.maketext {
+    line-height: 88rpx;
+    color: #fe860f;
+}
+.makebut {
+    position: absolute;
+    width: 88rpx;
+    height: 36rpx;
+    top: 26rpx;
+    right: 30rpx;
+    color: #ff8804;
+    border: 1rpx solid #ff8804;
+    text-align: center;
+    line-height: 32rpx;
+    border-radius: 5rpx;
+    font-size: 24rpx;
+}
+/* 预约 end  */
+
+
+/*推荐分类*/
+.category {
+  width: 25%;
+  color: #333;
+  line-height: 40rpx;
+  display: inline-block;
+  text-align: center;
+  font-size: 28rpx;
+  padding-bottom: 20rpx;
+}
+.category image {
+  width: 120rpx;
+  height: 120rpx;
+  margin: 20rpx auto 10rpx auto;
+}
+/*推荐分类 end */
+
+
+/* 热门项目 start */
+.hotItem{
+  border-top: 20rpx solid #eee;
+  width: 100%;
+  color: #333;
+  padding:20rpx 0;
+}
+.hotItem_title{
+  font-size: 30rpx;
+  line-height: 40rpx;
+  border-left: 8rpx solid #333;
+  border-bottom: 1rpx solid #e6e6e6;
+  padding-left: 10rpx;
+}
+.hotItem_list{
+  margin-top: 10rpx;
+}
+ .hotItem_list:first-child{
+  width: 100%;
+} 
+.hotItem_list navigator:first-child{
+  margin-right: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.hotItem_list navigator:first-child image{
+  height: 100%;
+  width: 100%;
+}
+.hotItem_list navigator{
+  width: 370rpx; 
+  height: 300rpx;
+  margin-right:10rpx;
+  margin-bottom: 10rpx;
+  overflow: hidden;
+}
+.recommendImg{
+  width: 370rpx;
+  height: 300rpx;
+}
+.hotItem_list navigator:nth-child(2n+1){
+  margin-right: 0;
+} 
+/* 热门项目 end */
+
+
+/* 固定按钮 start */
+.fixedBox{
+  position: fixed;
+  right: 0;
+  bottom: 40rpx;
+  width: 80rpx;
+  background: rgba(0,0,0,.5);
+  text-align: center;
+}
+.goCart{
+  width: 40rpx;
+  height: 80rpx;
+  display: block;
+  margin: 0 auto;
+  padding: 20rpx 0;
+}
+.fixedBox contact-button{
+  padding: 20rpx 0;
+  /* border-bottom: 1rpx solid #fff; */
+  width: 100%;
+}
